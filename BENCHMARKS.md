@@ -27,10 +27,10 @@ python3 scripts/generate_benchmark_corpus.py /tmp/prose-lint-bench \
 Observed result:
 
 ```text
-real time                 0.29 s
-throughput                18.4 MB/s
-file rate                 3,448 files/s
-maximum resident set      92.9 MiB
+real time                 0.34 s
+throughput                15.7 MB/s
+file rate                 2,941 files/s
+maximum resident set      92.8 MiB
 release binary             1.67 MiB
 ```
 

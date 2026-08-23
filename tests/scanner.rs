@@ -54,6 +54,24 @@ fn masks_markdown_code_and_inline_code() {
 }
 
 #[test]
+fn regexes_do_not_bridge_masked_regions() {
+    let scanner = Scanner::builtin().unwrap();
+    for text in [
+        "This is not just\n```text\nopaque code\n```\nbut a direct claim.",
+        "This is not just https://example.com but a direct claim.",
+    ] {
+        let report = scanner.scan_text("masked.md", text, &ScanOptions::default());
+        assert!(
+            !report
+                .findings
+                .iter()
+                .any(|finding| finding.rule_id == "technical.contrast-template"),
+            "unexpected cross-mask match in {text:?}"
+        );
+    }
+}
+
+#[test]
 fn weak_vocabulary_is_summarized_unless_all_is_requested() {
     let scanner = Scanner::builtin().unwrap();
     let normal = scanner.scan_text(

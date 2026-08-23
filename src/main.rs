@@ -2,6 +2,7 @@ use prose_lint::{Format, Profile, Report, ScanOptions, Scanner};
 use rayon::prelude::*;
 use std::env;
 use std::fs;
+use std::io::{self, Write};
 use std::path::{Path, PathBuf};
 use std::process::ExitCode;
 
@@ -87,38 +88,52 @@ fn run() -> Result<ExitCode, String> {
     let mut reports = results.into_iter().collect::<Result<Vec<_>, _>>()?;
     reports.sort_by(|left, right| left.path.cmp(&right.path));
 
-    match cli.format {
-        Format::Json => println!(
-            "{}",
-            serde_json::to_string_pretty(&reports)
-                .map_err(|error| format!("cannot render JSON: {error}"))?
-        ),
-        Format::Text => {
-            for report in &reports {
-                print!(
-                    "{}",
-                    report
-                        .render(Format::Text)
-                        .map_err(|error| error.to_string())?
-                );
-            }
-        }
-    }
-
     let should_fail = cli.strict
         && reports
             .iter()
             .any(|report| report.high_confidence_count() > 0);
-    Ok(if should_fail {
+    let exit_code = if should_fail {
         ExitCode::from(1)
     } else {
         ExitCode::SUCCESS
-    })
+    };
+    let stdout = io::stdout();
+    let mut stdout = stdout.lock();
+    match cli.format {
+        Format::Json => {
+            let mut rendered = serde_json::to_string_pretty(&reports)
+                .map_err(|error| format!("cannot render JSON: {error}"))?;
+            rendered.push('\n');
+            if !write_output(&mut stdout, rendered.as_bytes())? {
+                return Ok(exit_code);
+            }
+        }
+        Format::Text => {
+            for report in &reports {
+                let rendered = report
+                    .render(Format::Text)
+                    .map_err(|error| error.to_string())?;
+                if !write_output(&mut stdout, rendered.as_bytes())? {
+                    return Ok(exit_code);
+                }
+            }
+        }
+    }
+    Ok(exit_code)
+}
+
+fn write_output(writer: &mut impl Write, bytes: &[u8]) -> Result<bool, String> {
+    match writer.write_all(bytes) {
+        Ok(()) => Ok(true),
+        Err(error) if error.kind() == io::ErrorKind::BrokenPipe => Ok(false),
+        Err(error) => Err(format!("cannot write output: {error}")),
+    }
 }
 
 fn parse_args(args: Vec<String>) -> Result<Option<Cli>, String> {
     if args.is_empty() {
-        print!("{HELP}");
+        let stdout = io::stdout();
+        write_output(&mut stdout.lock(), HELP.as_bytes())?;
         return Ok(None);
     }
     let mut paths = Vec::new();
@@ -132,11 +147,14 @@ fn parse_args(args: Vec<String>) -> Result<Option<Cli>, String> {
     while index < args.len() {
         match args[index].as_str() {
             "-h" | "--help" => {
-                print!("{HELP}");
+                let stdout = io::stdout();
+                write_output(&mut stdout.lock(), HELP.as_bytes())?;
                 return Ok(None);
             }
             "-V" | "--version" => {
-                println!("prose-lint {}", env!("CARGO_PKG_VERSION"));
+                let version = format!("prose-lint {}\n", env!("CARGO_PKG_VERSION"));
+                let stdout = io::stdout();
+                write_output(&mut stdout.lock(), version.as_bytes())?;
                 return Ok(None);
             }
             "--all" => show_all = true,

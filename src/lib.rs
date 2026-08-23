@@ -301,7 +301,8 @@ impl Scanner {
     }
 
     pub fn scan_text(&self, path: &str, source: &str, options: &ScanOptions) -> Report {
-        let masked = mask_markdown(source);
+        let masked_document = mask_markdown(source);
+        let masked = &masked_document.text;
         let newlines = newline_offsets(source);
         let mut findings = Vec::new();
         let mut suppressed_low_confidence = 0;
@@ -312,7 +313,7 @@ impl Scanner {
             .find_overlapping_iter(masked.as_bytes())
         {
             let meta = &self.literal_meta[hit.pattern().as_usize()];
-            if !has_word_boundaries(&masked, hit.start(), hit.end()) {
+            if !has_word_boundaries(masked, hit.start(), hit.end()) {
                 continue;
             }
             match &meta.target {
@@ -361,14 +362,17 @@ impl Scanner {
             }
         }
 
-        let matching_regexes = self.regex_set.matches(&masked);
+        let matching_regexes = self.regex_set.matches(masked);
         for regex_index in matching_regexes.iter() {
             let rule_index = self.regex_rule_indices[regex_index];
             let rule = &self.rules[rule_index];
             if !profile_enabled(rule, options.profile) {
                 continue;
             }
-            for hit in self.regexes[regex_index].find_iter(&masked) {
+            for hit in self.regexes[regex_index].find_iter(masked) {
+                if masked_document.intersects_excluded(hit.start(), hit.end()) {
+                    continue;
+                }
                 push_finding(
                     &mut findings,
                     &mut seen,
@@ -383,20 +387,13 @@ impl Scanner {
 
         self.scan_abstraction_clusters(
             source,
-            &masked,
+            masked,
             &newlines,
             options,
             &mut findings,
             &mut seen,
         );
-        scan_em_dash_density(
-            source,
-            &masked,
-            &newlines,
-            options,
-            &mut findings,
-            &mut seen,
-        );
+        scan_em_dash_density(source, masked, &newlines, options, &mut findings, &mut seen);
 
         findings.sort_by_key(|finding| {
             (
@@ -599,8 +596,25 @@ fn paragraph_spans(text: &str) -> Vec<(usize, usize)> {
     spans
 }
 
-fn mask_markdown(source: &str) -> String {
+struct MaskedDocument {
+    text: String,
+    excluded: Vec<(usize, usize)>,
+}
+
+impl MaskedDocument {
+    fn intersects_excluded(&self, start: usize, end: usize) -> bool {
+        let index = self
+            .excluded
+            .partition_point(|(_, excluded_end)| *excluded_end <= start);
+        self.excluded
+            .get(index)
+            .is_some_and(|(excluded_start, _)| *excluded_start < end)
+    }
+}
+
+fn mask_markdown(source: &str) -> MaskedDocument {
     let mut masked = source.as_bytes().to_vec();
+    let mut excluded = Vec::new();
     let mut fence: Option<(u8, usize)> = None;
     let mut offset = 0;
 
@@ -615,7 +629,7 @@ fn mask_markdown(source: &str) -> String {
 
         match fence {
             Some((open_byte, open_len)) => {
-                masked[offset..content_end].fill(b' ');
+                mark_excluded(&mut masked, &mut excluded, offset, content_end);
                 if matches!(
                     marker,
                     Some((byte, length, true)) if byte == open_byte && length >= open_len
@@ -625,7 +639,7 @@ fn mask_markdown(source: &str) -> String {
             }
             None => {
                 if let Some((byte, length, _)) = marker {
-                    masked[offset..content_end].fill(b' ');
+                    mark_excluded(&mut masked, &mut excluded, offset, content_end);
                     fence = Some((byte, length));
                 }
             }
@@ -653,7 +667,7 @@ fn mask_markdown(source: &str) -> String {
                 candidate += closing_len;
             }
             if let Some(end) = closing_end {
-                masked[start..end].fill(b' ');
+                mark_excluded(&mut masked, &mut excluded, start, end);
                 index = end;
             } else {
                 index += opening_len;
@@ -668,13 +682,34 @@ fn mask_markdown(source: &str) -> String {
             while index < masked.len() && !masked[index].is_ascii_whitespace() {
                 index += 1;
             }
-            masked[start..index].fill(b' ');
+            mark_excluded(&mut masked, &mut excluded, start, index);
             continue;
         }
         index += 1;
     }
 
-    String::from_utf8(masked).expect("masking valid UTF-8 with ASCII spaces remains valid UTF-8")
+    excluded.sort_unstable_by_key(|(start, _)| *start);
+    let mut merged: Vec<(usize, usize)> = Vec::with_capacity(excluded.len());
+    for (start, end) in excluded {
+        match merged.last_mut() {
+            Some((_, previous_end)) if start <= *previous_end => {
+                *previous_end = (*previous_end).max(end);
+            }
+            _ => merged.push((start, end)),
+        }
+    }
+    MaskedDocument {
+        text: String::from_utf8(masked)
+            .expect("masking valid UTF-8 with ASCII spaces remains valid UTF-8"),
+        excluded: merged,
+    }
+}
+
+fn mark_excluded(masked: &mut [u8], excluded: &mut Vec<(usize, usize)>, start: usize, end: usize) {
+    if start < end {
+        masked[start..end].fill(b' ');
+        excluded.push((start, end));
+    }
 }
 
 fn markdown_fence(line: &[u8]) -> Option<(u8, usize, bool)> {
@@ -719,27 +754,27 @@ mod tests {
     fn masking_preserves_byte_offsets() {
         let source = "é `delve https://example.com` — plain";
         let masked = mask_markdown(source);
-        assert_eq!(source.len(), masked.len());
-        assert_eq!(masked.find('—'), source.find('—'));
-        assert!(!masked.contains("delve"));
-        assert!(!masked.contains("example"));
+        assert_eq!(source.len(), masked.text.len());
+        assert_eq!(masked.text.find('—'), source.find('—'));
+        assert!(!masked.text.contains("delve"));
+        assert!(!masked.text.contains("example"));
     }
 
     #[test]
     fn masking_respects_fence_marker_and_length() {
         let mixed = "```text\nIt is worth noting that hidden.\n~~~\nStill hidden.";
-        assert!(!mask_markdown(mixed).contains("worth noting"));
-        assert!(!mask_markdown(mixed).contains("Still hidden"));
+        assert!(!mask_markdown(mixed).text.contains("worth noting"));
+        assert!(!mask_markdown(mixed).text.contains("Still hidden"));
 
         let short_close = "````text\nIt is worth noting that hidden.\n```\nStill hidden.";
-        assert!(!mask_markdown(short_close).contains("Still hidden"));
+        assert!(!mask_markdown(short_close).text.contains("Still hidden"));
     }
 
     #[test]
     fn masking_supports_multibacktick_code_spans() {
         let source = "``It is worth noting that `x` is code`` but plain text remains.";
         let masked = mask_markdown(source);
-        assert!(!masked.contains("worth noting"));
-        assert!(masked.contains("plain text remains"));
+        assert!(!masked.text.contains("worth noting"));
+        assert!(masked.text.contains("plain text remains"));
     }
 }

@@ -53,6 +53,26 @@ fn directory_scan_does_not_follow_symlinks() {
 }
 
 #[test]
+fn broken_pipe_is_treated_as_normal_early_consumer_exit() {
+    use std::process::Stdio;
+
+    let dir = fixture_dir();
+    let text = "It is important to note that this works.\n".repeat(20_000);
+    let file = dir.join("large.md");
+    fs::write(&file, text).unwrap();
+    let mut child = Command::new(env!("CARGO_BIN_EXE_prose-lint"))
+        .args(["scan", "--format", "json"])
+        .arg(&file)
+        .stdout(Stdio::piped())
+        .spawn()
+        .unwrap();
+    drop(child.stdout.take());
+    let status = child.wait().unwrap();
+    assert!(status.success(), "broken pipe exit was {status:?}");
+    fs::remove_dir_all(dir).unwrap();
+}
+
+#[test]
 fn strict_mode_fails_only_for_high_confidence_findings() {
     let dir = fixture_dir();
     let weak = dir.join("weak.md");
