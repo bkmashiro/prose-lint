@@ -48,9 +48,9 @@ Scanner 不会让每条表达式分别遍历整篇文档：
 4. 每个文件只做一次 Markdown masking 和换行索引；
 5. 目录使用 Rayon 跨文件并行，worker 共享编译后的 scanner。
 
-Release binary 只有五个直接依赖：`aho-corasick`、`regex`、`rayon`、`serde`
-和 `serde_json`。没有 parser framework、async runtime、network client 或 NLP
-model。
+Release binary 只有六个直接依赖：`aho-corasick`、`glob`、`regex`、`rayon`、
+`serde` 和 `serde_json`。没有 parser framework、async runtime、network client
+或 NLP model。
 
 ## 安装
 
@@ -77,6 +77,12 @@ prose-lint scan README.md
 # 扫描目录；自动跳过构建和依赖目录
 prose-lint scan docs/
 
+# 只扫描当前目录的 Typst 文件；引号确保由 CLI 而不是 shell 展开
+prose-lint scan '*.typ'
+
+# 递归扫描所有 Typst 文件
+prose-lint scan '**/*.typ'
+
 # 显示所有低置信度实证词汇命中
 prose-lint scan paper.md --profile academic --all
 
@@ -91,7 +97,10 @@ prose-lint scan docs/ --jobs 4
 ```
 
 支持 `.md`、`.mdx`、`.txt`、`.rst`、`.adoc`、`.tex` 和 `.typ`。Fenced
-code、inline code 和 URL 会被屏蔽，同时保留原始 byte offset。
+code、inline code 和 URL 会被屏蔽，同时保留原始 byte offset。位置参数原生
+支持 `*`、`?`、`[ab]` 一类字符组以及递归 `**` 通配符。建议用单引号包住
+pattern，让 shell 把它原样交给 CLI；没有匹配项时会明确报错，不会静默完成
+一次空扫描。
 
 可用 profile：
 

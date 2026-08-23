@@ -19,6 +19,18 @@ Use `--profile academic`, `pr`, `commit`, `casual`, or `marketing` when the
 genre is known. Add `--all` only when a broad vocabulary review is useful.
 For machine-readable output, use `--format json`.
 
+Paths may be files, directories, or glob patterns. Quote patterns so behavior
+does not depend on shell expansion:
+
+```bash
+prose-lint scan '*.typ'
+prose-lint scan '**/*.typ'
+```
+
+The first scans top-level Typst files; the second scans them recursively. An
+unmatched pattern is an error, so do not report success without reading the
+command's exit status.
+
 ## Interpret findings
 
 Apply findings in this order:

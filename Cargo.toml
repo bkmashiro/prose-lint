@@ -8,6 +8,7 @@ repository = "https://github.com/bkmashiro/prose-lint"
 
 [dependencies]
 aho-corasick = "1.1"
+glob = "0.3"
 rayon = "1.10"
 regex = "1.11"
 serde = { version = "1.0", features = ["derive"] }

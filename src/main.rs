@@ -1,3 +1,4 @@
+use glob::{MatchOptions, glob_with};
 use prose_lint::{Format, Profile, Report, ScanOptions, Scanner};
 use rayon::prelude::*;
 use std::env;
@@ -20,6 +21,9 @@ OPTIONS:
     --jobs <N>         Maximum parallel file scans
     -h, --help         Print help
     -V, --version      Print version
+
+PATH accepts shell-style glob patterns. Quote recursive patterns so the CLI,
+rather than the shell, expands them: prose-lint scan '**/*.typ'
 
 The output is a writing aid, not an AI-authorship detector.
 "#;
@@ -51,7 +55,7 @@ fn run() -> Result<ExitCode, String> {
     let scanner = Scanner::builtin().map_err(|error| error.to_string())?;
     let mut files = Vec::new();
     for path in &cli.paths {
-        collect_files(path, &mut files)?;
+        collect_input(path, &mut files)?;
     }
     files.sort();
     files.dedup();
@@ -205,6 +209,71 @@ fn parse_args(args: Vec<String>) -> Result<Option<Cli>, String> {
         strict,
         jobs,
     }))
+}
+
+fn collect_input(path: &Path, files: &mut Vec<PathBuf>) -> Result<(), String> {
+    let pattern = path.to_string_lossy();
+    if path.exists() || !contains_glob_meta(&pattern) {
+        return collect_files(path, files);
+    }
+
+    let options = MatchOptions {
+        case_sensitive: true,
+        require_literal_separator: true,
+        require_literal_leading_dot: true,
+    };
+    let entries = glob_with(&pattern, options)
+        .map_err(|error| format!("invalid glob pattern {pattern:?}: {error}"))?;
+    let literal_root = literal_glob_root(path);
+    let mut matched = false;
+    for entry in entries {
+        let matched_path = entry.map_err(|error| format!("glob traversal error: {error}"))?;
+        matched = true;
+        if path_below_root_has_symlink_component(&matched_path, &literal_root)? {
+            continue;
+        }
+        collect_files(&matched_path, files)?;
+    }
+    if !matched {
+        return Err(format!("pattern matched no paths: {pattern}"));
+    }
+    Ok(())
+}
+
+fn literal_glob_root(pattern: &Path) -> PathBuf {
+    let mut root = PathBuf::new();
+    for component in pattern.components() {
+        let value = component.as_os_str().to_string_lossy();
+        if contains_glob_meta(&value) {
+            break;
+        }
+        root.push(component.as_os_str());
+    }
+    if root.as_os_str().is_empty() {
+        PathBuf::from(".")
+    } else {
+        root
+    }
+}
+
+fn path_below_root_has_symlink_component(path: &Path, root: &Path) -> Result<bool, String> {
+    let relative = path.strip_prefix(root).unwrap_or(path);
+    let mut current = root.to_path_buf();
+    for component in relative.components() {
+        current.push(component.as_os_str());
+        let metadata = fs::symlink_metadata(&current)
+            .map_err(|error| format!("cannot inspect {}: {error}", current.display()))?;
+        if metadata.file_type().is_symlink() {
+            return Ok(true);
+        }
+    }
+    Ok(false)
+}
+
+fn contains_glob_meta(pattern: &str) -> bool {
+    pattern
+        .bytes()
+        .any(|byte| matches!(byte, b'*' | b'?' | b'['))
 }
 
 fn collect_files(path: &Path, files: &mut Vec<PathBuf>) -> Result<(), String> {

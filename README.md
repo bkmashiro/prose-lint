@@ -65,7 +65,7 @@ The scanner does not run every expression over every document.
 5. Directories are scanned in parallel with Rayon. The compiled scanners are
    shared between workers.
 
-The release binary has five direct runtime dependencies: `aho-corasick`,
+The release binary has six direct runtime dependencies: `aho-corasick`, `glob`,
 `regex`, `rayon`, `serde`, and `serde_json`. It does not use a parser framework,
 async runtime, network client, or NLP model.
 
@@ -89,6 +89,12 @@ prose-lint scan README.md
 # Scan a repository; build and dependency directories are skipped
 prose-lint scan docs/
 
+# Scan only top-level Typst files. Quotes make expansion shell-independent.
+prose-lint scan '*.typ'
+
+# Scan Typst files recursively
+prose-lint scan '**/*.typ'
+
 # Show every low-confidence empirical vocabulary hit
 prose-lint scan paper.md --profile academic --all
 
@@ -104,7 +110,9 @@ prose-lint scan docs/ --jobs 4
 
 Supported extensions are `.md`, `.mdx`, `.txt`, `.rst`, `.adoc`, `.tex`, and
 `.typ`. Fenced code, inline code, and URLs are masked while preserving source
-offsets.
+offsets. Positional paths accept `*`, `?`, character classes such as `[ab]`, and
+recursive `**` glob patterns. An unmatched pattern is an error instead of a
+silent empty scan.
 
 Profiles:
 
