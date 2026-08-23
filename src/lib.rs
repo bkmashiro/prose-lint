@@ -601,36 +601,62 @@ fn paragraph_spans(text: &str) -> Vec<(usize, usize)> {
 
 fn mask_markdown(source: &str) -> String {
     let mut masked = source.as_bytes().to_vec();
-    let mut in_fence = false;
+    let mut fence: Option<(u8, usize)> = None;
     let mut offset = 0;
 
     for line in source.split_inclusive('\n') {
-        let trimmed = line.trim_start();
-        let fence = trimmed.starts_with("```") || trimmed.starts_with("~~~");
-        if in_fence || fence {
-            for byte in &mut masked[offset..offset + line.len()] {
-                if *byte != b'\n' {
-                    *byte = b' ';
+        let line_end = offset + line.len();
+        let content_end = if line.as_bytes().last() == Some(&b'\n') {
+            line_end - 1
+        } else {
+            line_end
+        };
+        let marker = markdown_fence(&source.as_bytes()[offset..content_end]);
+
+        match fence {
+            Some((open_byte, open_len)) => {
+                masked[offset..content_end].fill(b' ');
+                if matches!(
+                    marker,
+                    Some((byte, length, true)) if byte == open_byte && length >= open_len
+                ) {
+                    fence = None;
+                }
+            }
+            None => {
+                if let Some((byte, length, _)) = marker {
+                    masked[offset..content_end].fill(b' ');
+                    fence = Some((byte, length));
                 }
             }
         }
-        if fence {
-            in_fence = !in_fence;
-        }
-        offset += line.len();
+        offset = line_end;
     }
 
     let mut index = 0;
     while index < masked.len() {
         if masked[index] == b'`' {
             let start = index;
-            index += 1;
-            while index < masked.len() && masked[index] != b'`' && masked[index] != b'\n' {
-                index += 1;
+            let opening_len = byte_run(&masked, index, b'`');
+            let mut candidate = index + opening_len;
+            let mut closing_end = None;
+            while candidate < masked.len() {
+                if masked[candidate] != b'`' {
+                    candidate += 1;
+                    continue;
+                }
+                let closing_len = byte_run(&masked, candidate, b'`');
+                if closing_len == opening_len {
+                    closing_end = Some(candidate + closing_len);
+                    break;
+                }
+                candidate += closing_len;
             }
-            if index < masked.len() && masked[index] == b'`' {
-                index += 1;
-                masked[start..index].fill(b' ');
+            if let Some(end) = closing_end {
+                masked[start..end].fill(b' ');
+                index = end;
+            } else {
+                index += opening_len;
             }
             continue;
         }
@@ -649,6 +675,32 @@ fn mask_markdown(source: &str) -> String {
     }
 
     String::from_utf8(masked).expect("masking valid UTF-8 with ASCII spaces remains valid UTF-8")
+}
+
+fn markdown_fence(line: &[u8]) -> Option<(u8, usize, bool)> {
+    let leading_spaces = line.iter().take_while(|byte| **byte == b' ').count();
+    if leading_spaces > 3 || leading_spaces == line.len() {
+        return None;
+    }
+    let marker = line[leading_spaces];
+    if marker != b'`' && marker != b'~' {
+        return None;
+    }
+    let length = byte_run(line, leading_spaces, marker);
+    if length < 3 {
+        return None;
+    }
+    let closing_form = line[leading_spaces + length..]
+        .iter()
+        .all(|byte| byte.is_ascii_whitespace());
+    Some((marker, length, closing_form))
+}
+
+fn byte_run(bytes: &[u8], start: usize, byte: u8) -> usize {
+    bytes[start..]
+        .iter()
+        .take_while(|item| **item == byte)
+        .count()
 }
 
 #[cfg(test)]
@@ -671,5 +723,23 @@ mod tests {
         assert_eq!(masked.find('—'), source.find('—'));
         assert!(!masked.contains("delve"));
         assert!(!masked.contains("example"));
+    }
+
+    #[test]
+    fn masking_respects_fence_marker_and_length() {
+        let mixed = "```text\nIt is worth noting that hidden.\n~~~\nStill hidden.";
+        assert!(!mask_markdown(mixed).contains("worth noting"));
+        assert!(!mask_markdown(mixed).contains("Still hidden"));
+
+        let short_close = "````text\nIt is worth noting that hidden.\n```\nStill hidden.";
+        assert!(!mask_markdown(short_close).contains("Still hidden"));
+    }
+
+    #[test]
+    fn masking_supports_multibacktick_code_spans() {
+        let source = "``It is worth noting that `x` is code`` but plain text remains.";
+        let masked = mask_markdown(source);
+        assert!(!masked.contains("worth noting"));
+        assert!(masked.contains("plain text remains"));
     }
 }
