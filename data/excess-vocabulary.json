@@ -1,0 +1,5405 @@
+{
+  "source": "Kobak et al. 2025; berenslab/chatgpt-excess-words@53db991",
+  "entries": [
+    {
+      "word": "abcd",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "multiple different abbreviations"
+    },
+    {
+      "word": "accentuates",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "aceis",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "angiotensin-converting enzyme inhibitors"
+    },
+    {
+      "word": "achieving",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "acknowledges",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "acknowledging",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "across",
+      "class": "style",
+      "part_of_speech": "preposition",
+      "comment": null
+    },
+    {
+      "word": "acute",
+      "class": "content",
+      "part_of_speech": "adjective",
+      "comment": "\"acute pneumonia\""
+    },
+    {
+      "word": "additionally",
+      "class": "style",
+      "part_of_speech": "adverb",
+      "comment": null
+    },
+    {
+      "word": "address",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "addresses",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "addressing",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "adept",
+      "class": "style",
+      "part_of_speech": "adjective",
+      "comment": null
+    },
+    {
+      "word": "adhered",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "adhering",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "adipate",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "adipic acid"
+    },
+    {
+      "word": "admet",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "absorption, distribution, metabolism, excretion and toxicity"
+    },
+    {
+      "word": "adrd",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "Alzheimer's disease and related dementias"
+    },
+    {
+      "word": "advancement",
+      "class": "style",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "advancements",
+      "class": "style",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "advancing",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "adversarial",
+      "class": "content",
+      "part_of_speech": "adjective",
+      "comment": "generative adversarial networks, adversarial examples"
+    },
+    {
+      "word": "advocates",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "advocating",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "aerosolization",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "affirming",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "afflicted",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "agnostic",
+      "class": "content",
+      "part_of_speech": "adjective",
+      "comment": "tumour-agnostic"
+    },
+    {
+      "word": "aiding",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "aims",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "akin",
+      "class": "style",
+      "part_of_speech": "adjective",
+      "comment": null
+    },
+    {
+      "word": "align",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "aligning",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "aligns",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "alongside",
+      "class": "style",
+      "part_of_speech": "preposition",
+      "comment": null
+    },
+    {
+      "word": "alphafold",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "amid",
+      "class": "style",
+      "part_of_speech": "preposition",
+      "comment": null
+    },
+    {
+      "word": "amidst",
+      "class": "style",
+      "part_of_speech": "preposition",
+      "comment": null
+    },
+    {
+      "word": "amos",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "multiple different abbreviations"
+    },
+    {
+      "word": "analysis",
+      "class": "style",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "angiotensin",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "announced",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "anosmia",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "antiseizure",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "antiviral",
+      "class": "content",
+      "part_of_speech": "adjective",
+      "comment": null
+    },
+    {
+      "word": "aotearoa",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "Māori-language name for New Zealand"
+    },
+    {
+      "word": "apixaban",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "anticoagulant medication used to treat and prevent blood clots"
+    },
+    {
+      "word": "apologizes",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "approach",
+      "class": "style",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "april",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "Covid pandemic spread"
+    },
+    {
+      "word": "arbovirus",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "arbs",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "abbreviations including: ARBs, angiotensin receptor antagonists, used to treat high blood pressure and heart failure"
+    },
+    {
+      "word": "ards",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "abbreviations, ARDS, Acute respiratory distress syndrome"
+    },
+    {
+      "word": "armonk",
+      "class": "other",
+      "part_of_speech": "noun",
+      "comment": "related to SPSS citations (which is by IBM, whose headquarters are in Armonk)"
+    },
+    {
+      "word": "aspx",
+      "class": "other",
+      "part_of_speech": "",
+      "comment": "appears in links, but this is partially artefact of data availability and trial registration statements not being filtered out"
+    },
+    {
+      "word": "assess",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "assessed",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "assessing",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "assessments",
+      "class": "style",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "astrazeneca",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "attains",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "attr",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "abbreviation for a type of amyloidosis disease"
+    },
+    {
+      "word": "attributed",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "augmenting",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "authorization",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "FDA drug authorization"
+    },
+    {
+      "word": "authorized",
+      "class": "content",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "autoencoder",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "avenue",
+      "class": "style",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "avenues",
+      "class": "style",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "background",
+      "class": "content/style",
+      "part_of_speech": "noun",
+      "comment": "can be both"
+    },
+    {
+      "word": "bacteroidota",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "based",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "betacoronavirus",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "between",
+      "class": "style",
+      "part_of_speech": "preposition",
+      "comment": null
+    },
+    {
+      "word": "bibliometrix",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "R package"
+    },
+    {
+      "word": "bioeconomy",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "bioinspired",
+      "class": "content",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "biontech",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "bioorthogonal",
+      "class": "content",
+      "part_of_speech": "adjective",
+      "comment": null
+    },
+    {
+      "word": "bivariable",
+      "class": "content",
+      "part_of_speech": "adjective",
+      "comment": null
+    },
+    {
+      "word": "blactx",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "bolster",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "bolstered",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "bolstering",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "booster",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "boredom",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "both",
+      "class": "style",
+      "part_of_speech": "pronoun/adverb",
+      "comment": null
+    },
+    {
+      "word": "brier",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "some score (MSE for predicted probabilites)"
+    },
+    {
+      "word": "broader",
+      "class": "style",
+      "part_of_speech": "adjective",
+      "comment": null
+    },
+    {
+      "word": "browning",
+      "class": "content",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "burgeoning",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "businesses",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "capabilities",
+      "class": "style",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "capitalizing",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "carapace",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "carbapenemase",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "categorized",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "categorizes",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "categorizing",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "cbioportal",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "ccle",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "abbreviations, one for a type of lupus and Cancer Cell Line Encyclopedia (CCLE)"
+    },
+    {
+      "word": "cerna",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "\"competing endogenous RNA\""
+    },
+    {
+      "word": "cfdna",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "cell-free DNA"
+    },
+    {
+      "word": "cfps",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "various abbreviations"
+    },
+    {
+      "word": "cgga",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "Chinese Glioma Genome Atlas (CGGA)"
+    },
+    {
+      "word": "challenge",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "challenges",
+      "class": "style",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "chat",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "chatbot",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "chatbots",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "chatgpt",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "chloroquine",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "cibersort",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "circrna",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "circrnas",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "cisgender",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "citespace",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "clinical",
+      "class": "content",
+      "part_of_speech": "adjective",
+      "comment": null
+    },
+    {
+      "word": "clostridioides",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "part of species name"
+    },
+    {
+      "word": "closures",
+      "class": "content/style",
+      "part_of_speech": "noun",
+      "comment": "used in many contexts, like businesses"
+    },
+    {
+      "word": "cmax",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "cnns",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "codebook",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "coii",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "combating",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "combustible",
+      "class": "content",
+      "part_of_speech": "adjective",
+      "comment": "e-cigarette related"
+    },
+    {
+      "word": "commendable",
+      "class": "style",
+      "part_of_speech": "adjective",
+      "comment": null
+    },
+    {
+      "word": "compelling",
+      "class": "style",
+      "part_of_speech": "adjective",
+      "comment": null
+    },
+    {
+      "word": "complex",
+      "class": "style",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "complexities",
+      "class": "content/style",
+      "part_of_speech": "noun",
+      "comment": "complexity can be a term as in computational complexity, or a general term"
+    },
+    {
+      "word": "complicates",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "complicating",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "comprehend",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "comprehending",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "comprehension",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "diagnostic term as in reading comprehension"
+    },
+    {
+      "word": "comprehensive",
+      "class": "style",
+      "part_of_speech": "adjective",
+      "comment": null
+    },
+    {
+      "word": "comprising",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "concurrently",
+      "class": "content/style",
+      "part_of_speech": "adverb",
+      "comment": "in principle style, but often used in a specific context (concurrency of disease symptoms or medications)"
+    },
+    {
+      "word": "concussions",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "conditions",
+      "class": "style",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "conducted",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "conferencing",
+      "class": "content",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "connor",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "name"
+    },
+    {
+      "word": "consequently",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "consolidates",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "consolidations",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "radiology term"
+    },
+    {
+      "word": "contagion",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "contagious",
+      "class": "content",
+      "part_of_speech": "adjective",
+      "comment": null
+    },
+    {
+      "word": "containment",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "contracting",
+      "class": "content",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "contrastive",
+      "class": "content",
+      "part_of_speech": "adjective",
+      "comment": null
+    },
+    {
+      "word": "contributing",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": "contributing factors "
+    },
+    {
+      "word": "convalescence",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "convalescent",
+      "class": "content",
+      "part_of_speech": "adjective",
+      "comment": "covid related"
+    },
+    {
+      "word": "conversely",
+      "class": "style",
+      "part_of_speech": "adverb",
+      "comment": null
+    },
+    {
+      "word": "converting",
+      "class": "content",
+      "part_of_speech": "verb",
+      "comment": "often part of enzyme-names"
+    },
+    {
+      "word": "convolution",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "convolutional",
+      "class": "content",
+      "part_of_speech": "adjective",
+      "comment": null
+    },
+    {
+      "word": "coreq",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "abbreviatoin, Consolidated Criteria for Reporting Qualitative Studies (COREQ)"
+    },
+    {
+      "word": "corona",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "coronaviridae",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "familiy of viruses"
+    },
+    {
+      "word": "coronavirus",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "coronaviruses",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "corp",
+      "class": "other",
+      "part_of_speech": "noun",
+      "comment": "often part of citation that refer to a corporation like Microsoft corp."
+    },
+    {
+      "word": "correlating",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "cough",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "covid",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "covs",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "abbreviation for coronaviruses"
+    },
+    {
+      "word": "crafted",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "crafting",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "crises",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "crisis",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "crispr",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "crucial",
+      "class": "style",
+      "part_of_speech": "adjective",
+      "comment": null
+    },
+    {
+      "word": "ctri",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "Clinical Trial Registry India"
+    },
+    {
+      "word": "culminating",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "cuproptosis",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "customizing",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "daratumumab",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "dass",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "Depression Anxiety Stress Scale (DASS)"
+    },
+    {
+      "word": "decarbonization",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "declare",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "declared",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "decoder",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "deductively",
+      "class": "style",
+      "part_of_speech": "adverb",
+      "comment": null
+    },
+    {
+      "word": "deeper",
+      "class": "content/style",
+      "part_of_speech": "adjective",
+      "comment": "can potentially refer to deep learning / deep networks"
+    },
+    {
+      "word": "degs",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "DEGs"
+    },
+    {
+      "word": "delineates",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "delong",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "DeLong’s test to compare AUCs"
+    },
+    {
+      "word": "delta",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "delve",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "delved",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "delves",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "delving",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "demonstrated",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "demonstrates",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "demonstrating",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "dependability",
+      "class": "style",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "dependable",
+      "class": "style",
+      "part_of_speech": "adjective",
+      "comment": null
+    },
+    {
+      "word": "deps",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "differentially expressed proteins (DEPs)"
+    },
+    {
+      "word": "despite",
+      "class": "style",
+      "part_of_speech": "preposition",
+      "comment": null
+    },
+    {
+      "word": "detailing",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "detrimentally",
+      "class": "style",
+      "part_of_speech": "adverb",
+      "comment": null
+    },
+    {
+      "word": "dichalcogenides",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "diminishes",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "diminishing",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "discern",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "discerned",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "discernible",
+      "class": "style",
+      "part_of_speech": "adjective",
+      "comment": null
+    },
+    {
+      "word": "discerning",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "disease",
+      "class": "content",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "displaying",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "disrupts",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "distancing",
+      "class": "content",
+      "part_of_speech": "verb",
+      "comment": "social distancing"
+    },
+    {
+      "word": "distinct",
+      "class": "style",
+      "part_of_speech": "adjective",
+      "comment": null
+    },
+    {
+      "word": "distinctions",
+      "class": "style",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "distinctive",
+      "class": "style",
+      "part_of_speech": "adjective",
+      "comment": null
+    },
+    {
+      "word": "diverse",
+      "class": "style",
+      "part_of_speech": "adjective",
+      "comment": null
+    },
+    {
+      "word": "doacs",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "Direct oral anticoagulants (DOACs)"
+    },
+    {
+      "word": "domestically",
+      "class": "content",
+      "part_of_speech": "adverb",
+      "comment": null
+    },
+    {
+      "word": "druggable",
+      "class": "content",
+      "part_of_speech": "adjective",
+      "comment": null
+    },
+    {
+      "word": "during",
+      "class": "style",
+      "part_of_speech": "preposition",
+      "comment": null
+    },
+    {
+      "word": "dysgeusia",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "easing",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "ebola",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "ebsco",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "host of some literature databases"
+    },
+    {
+      "word": "ebscohost",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "host of some literature databases"
+    },
+    {
+      "word": "economies",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "economy",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "effectively",
+      "class": "style",
+      "part_of_speech": "adverb",
+      "comment": null
+    },
+    {
+      "word": "efficacy",
+      "class": "style/count",
+      "part_of_speech": "noun",
+      "comment": "can refer to vaccine efficacy"
+    },
+    {
+      "word": "efsa",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "European Food Safety Authority (EFSA), but also an artefact in few cases"
+    },
+    {
+      "word": "egger",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "method name"
+    },
+    {
+      "word": "elecsys",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "assay name"
+    },
+    {
+      "word": "electrolyzer",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "elevate",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "elevated",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "elevates",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "elevating",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "elucidate",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "elucidates",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "elucidating",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "emax",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "parameter name"
+    },
+    {
+      "word": "embracing",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "emerged",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "emergencies",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "emerges",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "empagliflozin",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "drug"
+    },
+    {
+      "word": "emphasises",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "emphasising",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "emphasize",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "emphasizes",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "emphasizing",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "employed",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "employing",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "employs",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "empowers",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "emulating",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "emulation",
+      "class": "style",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "enabling",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "encapsulates",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "encoder",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "encompass",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "encompassed",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "encompasses",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "encompassing",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "encyclopedia",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "endangering",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "endeavors",
+      "class": "style",
+      "part_of_speech": "noun",
+      "comment": "\"research endeavors\""
+    },
+    {
+      "word": "endeavours",
+      "class": "style",
+      "part_of_speech": "noun",
+      "comment": "BE version"
+    },
+    {
+      "word": "endogeneity",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "enduring",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "enhance",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "enhanced",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "enhancements",
+      "class": "style",
+      "part_of_speech": "nount",
+      "comment": null
+    },
+    {
+      "word": "enhances",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "enhancing",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "ensuring",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "enterprises",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "enzalutamide",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "drug"
+    },
+    {
+      "word": "epicenter",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "epidata",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "analysis software"
+    },
+    {
+      "word": "epidemic",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "equipment",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "equipping",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "escalating",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "essentials",
+      "class": "style",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "evaluates",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "evapotranspiration",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "evolving",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "exacerbating",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "examines",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "exceeding",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "excels",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "exceptional",
+      "class": "style",
+      "part_of_speech": "adjective",
+      "comment": null
+    },
+    {
+      "word": "exceptionally",
+      "class": "style",
+      "part_of_speech": "adverb",
+      "comment": null
+    },
+    {
+      "word": "exerting",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "exhibit",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "exhibited",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "exhibiting",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "exhibits",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "expedite",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "expediting",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "explainable",
+      "class": "content",
+      "part_of_speech": "adverb",
+      "comment": "explainable AI"
+    },
+    {
+      "word": "exploration",
+      "class": "style",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "explores",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "faces",
+      "class": "content/style",
+      "part_of_speech": "noun/verb",
+      "comment": "can be content noun (face) or style verb (to face)"
+    },
+    {
+      "word": "facilitated",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "facilitates",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "facilitating",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "faers",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "FDA Adverse Event Reporting System"
+    },
+    {
+      "word": "fatality",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "favipiravir",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "ebola drug repurposed for covid"
+    },
+    {
+      "word": "featuring",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "feiii",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "Fe(III), Iron cation"
+    },
+    {
+      "word": "ferroptosis",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "type of cell death"
+    },
+    {
+      "word": "fight",
+      "class": "style",
+      "part_of_speech": "noun/verb",
+      "comment": null
+    },
+    {
+      "word": "findings",
+      "class": "style",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "finngen",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "database like UK Biobank"
+    },
+    {
+      "word": "flatten",
+      "class": "content",
+      "part_of_speech": "verb",
+      "comment": "\"flatten the curve\""
+    },
+    {
+      "word": "flavivirus",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "flesch",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "score name"
+    },
+    {
+      "word": "focusing",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "formidable",
+      "class": "style",
+      "part_of_speech": "adjective",
+      "comment": null
+    },
+    {
+      "word": "fostering",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "fosters",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "foundational",
+      "class": "style",
+      "part_of_speech": "adjective",
+      "comment": null
+    },
+    {
+      "word": "frontline",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "frontline staff (COVID!), or Frontline therapy refers to a patient's first CLL treatment"
+    },
+    {
+      "word": "furin",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "type of protease, 'furin cleavage site' is COVID related"
+    },
+    {
+      "word": "furnish",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "gabaa",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "gabab",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "garnered",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "garnering",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "gauged",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "gbsa",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "abbreviation"
+    },
+    {
+      "word": "gepia",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "software, Gene Expression Profiling Interactive Analysis (GEPIA)"
+    },
+    {
+      "word": "github",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "globe",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "governing",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "governments",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "grappling",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "groundbreaking",
+      "class": "style",
+      "part_of_speech": "adjective",
+      "comment": null
+    },
+    {
+      "word": "groundwork",
+      "class": "style",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "gsea",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "Gene set enrichment analysis"
+    },
+    {
+      "word": "guillain",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "Guillain-Barré syndrome"
+    },
+    {
+      "word": "gwas",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "Genome-wide association study"
+    },
+    {
+      "word": "handwashing",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "Covid mitigation"
+    },
+    {
+      "word": "hardest",
+      "class": "style",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "hardships",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "harness",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "harnesses",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "harnessing",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "havoc",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "HAVoC is a pipeline utilizing several bioinformatic tools to perform multiple necessary analyses for investigating genetic variance among SARS-CoV-2 samples."
+    },
+    {
+      "word": "hcov",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "Human coronavirus (HCoV)"
+    },
+    {
+      "word": "hcws",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "healthcare workers"
+    },
+    {
+      "word": "heighten",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "heightened",
+      "class": "style",
+      "part_of_speech": "adjective",
+      "comment": null
+    },
+    {
+      "word": "henan",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "province in China"
+    },
+    {
+      "word": "hesitancy",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "vaccine hesitancy"
+    },
+    {
+      "word": "hesitant",
+      "class": "content",
+      "part_of_speech": "adjective",
+      "comment": "vaccine hesitancy"
+    },
+    {
+      "word": "heterogenous",
+      "class": "content/style",
+      "part_of_speech": "adjective",
+      "comment": "can have technical meanings but can also be used in other contexts"
+    },
+    {
+      "word": "heterostructure",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "hfref",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "heart failure with reduced ejection fraction (HFrEF)"
+    },
+    {
+      "word": "highlight",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "highlighting",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "highlights",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "hiit",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "high-intensity interval training (HIIT)"
+    },
+    {
+      "word": "hinder",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "hinges",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "hinting",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "hipsc",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "hESCs and hiPSCs are both human pluripotent stem cells (hPSCs)"
+    },
+    {
+      "word": "hold",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "holds",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "hospitalized",
+      "class": "content",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "hotel",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "related to Covid spread"
+    },
+    {
+      "word": "however",
+      "class": "style",
+      "part_of_speech": "adverb",
+      "comment": null
+    },
+    {
+      "word": "https",
+      "class": "other",
+      "part_of_speech": "",
+      "comment": "appears in links"
+    },
+    {
+      "word": "hubei",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "province in China"
+    },
+    {
+      "word": "humanity",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "hydroxychloroquine",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "hydroxymethylcytosine",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "hypercoagulability",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "hyperinflammation",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "hyperinflammatory",
+      "class": "content",
+      "part_of_speech": "adjective",
+      "comment": null
+    },
+    {
+      "word": "icgc",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "International Cancer Genome Consortium (ICGC)"
+    },
+    {
+      "word": "icis",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "Immune checkpoint inhibitors (ICIs)"
+    },
+    {
+      "word": "identified",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "ideological",
+      "class": "content",
+      "part_of_speech": "adjective",
+      "comment": "relating to some ideology"
+    },
+    {
+      "word": "ieee",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "Mostly refers to IEEE Xplore"
+    },
+    {
+      "word": "illuminates",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "illuminating",
+      "class": "style",
+      "part_of_speech": "adjective",
+      "comment": null
+    },
+    {
+      "word": "imbalances",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "impact",
+      "class": "style",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "impactful",
+      "class": "style",
+      "part_of_speech": "adjective",
+      "comment": null
+    },
+    {
+      "word": "impacting",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "impede",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "impeding",
+      "class": "style",
+      "part_of_speech": "adjective",
+      "comment": null
+    },
+    {
+      "word": "imperative",
+      "class": "style",
+      "part_of_speech": "adjective",
+      "comment": null
+    },
+    {
+      "word": "impressive",
+      "class": "style",
+      "part_of_speech": "adjective",
+      "comment": null
+    },
+    {
+      "word": "inaccuracies",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "refers to problems with data"
+    },
+    {
+      "word": "inadequately",
+      "class": "style",
+      "part_of_speech": "adverb",
+      "comment": null
+    },
+    {
+      "word": "inaugural",
+      "class": "content/style",
+      "part_of_speech": "adjective",
+      "comment": "unsure"
+    },
+    {
+      "word": "including",
+      "class": "style",
+      "part_of_speech": "preposition",
+      "comment": null
+    },
+    {
+      "word": "incorporates",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "incorporating",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "indicating",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "individuals",
+      "class": "style",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "inequitable",
+      "class": "content",
+      "part_of_speech": "adjective",
+      "comment": "unfair; unjust"
+    },
+    {
+      "word": "infection",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "infectiousness",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "influencing",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "inherent",
+      "class": "style",
+      "part_of_speech": "adjective",
+      "comment": null
+    },
+    {
+      "word": "initially",
+      "class": "style",
+      "part_of_speech": "adverb",
+      "comment": null
+    },
+    {
+      "word": "innovative",
+      "class": "style",
+      "part_of_speech": "adjective",
+      "comment": null
+    },
+    {
+      "word": "inquiries",
+      "class": "style",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "insights",
+      "class": "style",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "integrates",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "integrating",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "integration",
+      "class": "style",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "interconnectedness",
+      "class": "style",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "interplay",
+      "class": "style",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "intersected",
+      "class": "content",
+      "part_of_speech": "verb",
+      "comment": "one set of genes was \"intersected\" with another set of genes"
+    },
+    {
+      "word": "intersectionality",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "Intersectionality (or intersectional theory) is a term first coined in 1989 by American civil rights advocate and leading scholar of critical race theory, Kimberlé Williams Crenshaw"
+    },
+    {
+      "word": "interspaced",
+      "class": "content",
+      "part_of_speech": "verb",
+      "comment": "clustered regularly interspaced short palindromic repeat (CRISPR)"
+    },
+    {
+      "word": "into",
+      "class": "style",
+      "part_of_speech": "preposition",
+      "comment": null
+    },
+    {
+      "word": "intricacies",
+      "class": "style",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "intricate",
+      "class": "style",
+      "part_of_speech": "adjective",
+      "comment": null
+    },
+    {
+      "word": "intricately",
+      "class": "style",
+      "part_of_speech": "adverb",
+      "comment": null
+    },
+    {
+      "word": "introduces",
+      "class": "style",
+      "part_of_speech": "adjective",
+      "comment": null
+    },
+    {
+      "word": "invaluable",
+      "class": "style",
+      "part_of_speech": "adjective",
+      "comment": null
+    },
+    {
+      "word": "investigates",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "investigation",
+      "class": "content/style",
+      "part_of_speech": "noun",
+      "comment": "“investigation” can be a synonym of “study” or “experiment” which is style"
+    },
+    {
+      "word": "investors",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "economics term"
+    },
+    {
+      "word": "involves",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "involving",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "isrctn",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "The ISRCTN registry is a primary clinical trial registry"
+    },
+    {
+      "word": "janssen",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "Covid vaccine"
+    },
+    {
+      "word": "juxtaposed",
+      "class": "style",
+      "part_of_speech": "adjective",
+      "comment": null
+    },
+    {
+      "word": "katp",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "ATP-sensitive potassium (KATP) channels"
+    },
+    {
+      "word": "kcat",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "kcat is the catalytic constant"
+    },
+    {
+      "word": "koch",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "Robert Koch"
+    },
+    {
+      "word": "lachnospiraceae",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "lacticaseibacillus",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "lactiplantibacillus",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "landscape",
+      "class": "content/style",
+      "part_of_speech": "noun",
+      "comment": "can have technical meaning but also used as a style word"
+    },
+    {
+      "word": "lasso",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "regularization"
+    },
+    {
+      "word": "latinx",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "leading",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "leone",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "Sierra Leone - Ebola outbreak"
+    },
+    {
+      "word": "levels",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "leverages",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "leveraging",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "liberia",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "lies",
+      "class": "content/style",
+      "part_of_speech": "noun/verb",
+      "comment": "can be noun (plural from lie) or a verb (3rd person singular)"
+    },
+    {
+      "word": "like",
+      "class": "style",
+      "part_of_speech": "particle",
+      "comment": null
+    },
+    {
+      "word": "limitations",
+      "class": "style",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "linked",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "lipidomic",
+      "class": "content",
+      "part_of_speech": "adjective",
+      "comment": null
+    },
+    {
+      "word": "livelihoods",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "llms",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "large language model"
+    },
+    {
+      "word": "lncrna",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "Long noncoding RNAs"
+    },
+    {
+      "word": "lncrnas",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "Long noncoding RNAs"
+    },
+    {
+      "word": "lockdown",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "lockdowns",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "lombardy",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "Covid outbreak in Italy"
+    },
+    {
+      "word": "loneliness",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "lopinavir",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "lowly",
+      "class": "content",
+      "part_of_speech": "adjective",
+      "comment": "lowly expressed genes"
+    },
+    {
+      "word": "lstm",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "long short-term memory"
+    },
+    {
+      "word": "luad",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "Lung adenocarcinoma"
+    },
+    {
+      "word": "lymphocytopenia",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "lymphopenia",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "machining",
+      "class": "content",
+      "part_of_speech": "adjective",
+      "comment": "machining process"
+    },
+    {
+      "word": "mafld",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "“Metabolic dysfunction-associated fatty liver disease (MAFLD)” is the term suggested in 2020 to refer to fatty liver disease"
+    },
+    {
+      "word": "maintaining",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "management",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "managing",
+      "class": "content",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "march",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "Covid outbreak"
+    },
+    {
+      "word": "marking",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "Can refer to tumor marking, see \"tumor marker\""
+    },
+    {
+      "word": "mash",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "Metabolic dysfunction-associated steatohepatitis (MASH) is the replacement term for what used to be called nonalcoholic steatohepatitis"
+    },
+    {
+      "word": "mask",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "Covid prevention"
+    },
+    {
+      "word": "masks",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "Covid prevention"
+    },
+    {
+      "word": "masld",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "Metabolic dysfunction-associated steatotic liver disease (MASLD) is the latest term for steatotic liver disease"
+    },
+    {
+      "word": "mechanisms",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "general term used in biology"
+    },
+    {
+      "word": "medrxiv",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "medRxiv was launched in 2019"
+    },
+    {
+      "word": "mendelian",
+      "class": "content",
+      "part_of_speech": "adjective",
+      "comment": null
+    },
+    {
+      "word": "merges",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "mers",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "Middle East respiratory syndrome"
+    },
+    {
+      "word": "metacognition",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "methodologies",
+      "class": "style",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "methylammonium",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "meticulous",
+      "class": "style",
+      "part_of_speech": "adjective",
+      "comment": null
+    },
+    {
+      "word": "meticulously",
+      "class": "style",
+      "part_of_speech": "adverb",
+      "comment": null
+    },
+    {
+      "word": "microcephaly",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "midst",
+      "class": "style",
+      "part_of_speech": "preposition",
+      "comment": null
+    },
+    {
+      "word": "minimizing",
+      "class": "content/style",
+      "part_of_speech": "verb",
+      "comment": "can have technical and non-technical meanings"
+    },
+    {
+      "word": "minoritized",
+      "class": "content",
+      "part_of_speech": "adjective",
+      "comment": "minoritized groups of people"
+    },
+    {
+      "word": "mirroring",
+      "class": "content/style",
+      "part_of_speech": "verb",
+      "comment": "can have technical and non-technical meanings"
+    },
+    {
+      "word": "miseq",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "Illumina MiSeq"
+    },
+    {
+      "word": "misinformation",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "mitigate",
+      "class": "content",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "mitigated",
+      "class": "content",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "mitigates",
+      "class": "content",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "mitigating",
+      "class": "content",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "mitogenome",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "model",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "statistical model, model organism, etc."
+    },
+    {
+      "word": "moderating",
+      "class": "content",
+      "part_of_speech": "adjective",
+      "comment": "moderating factors/effects"
+    },
+    {
+      "word": "moderna",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "Covid vaccine"
+    },
+    {
+      "word": "modulating",
+      "class": "content/style",
+      "part_of_speech": "verb",
+      "comment": "can have technical and non-technical meanings"
+    },
+    {
+      "word": "molnupiravir",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "monkeypox",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "mpox",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "Mpox (formerly known as monkeypox)"
+    },
+    {
+      "word": "mpro",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "SARS-CoV-2 main protease"
+    },
+    {
+      "word": "mpxv",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "MPXV is an enveloped double-stranded DNA (dsDNA) virus"
+    },
+    {
+      "word": "mucormycosis",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "multifaceted",
+      "class": "style",
+      "part_of_speech": "adjective",
+      "comment": null
+    },
+    {
+      "word": "multiracial",
+      "class": "content",
+      "part_of_speech": "adjective",
+      "comment": null
+    },
+    {
+      "word": "mxene",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "In materials science, MXenes are a class of two-dimensional inorganic compounds along with MBenes"
+    },
+    {
+      "word": "myalgia",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "nanosheet",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "nasopharyngeal",
+      "class": "content",
+      "part_of_speech": "adjectove",
+      "comment": null
+    },
+    {
+      "word": "ncov",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "2019-nCoV"
+    },
+    {
+      "word": "necessitate",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "necessitates",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "necessitating",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "necessity",
+      "class": "style",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "need",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "neurofeedback",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "neuromorphic",
+      "class": "content",
+      "part_of_speech": "adjective",
+      "comment": null
+    },
+    {
+      "word": "neutrality",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "carbon neutrality"
+    },
+    {
+      "word": "news",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "nhanes",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "National Health and Nutrition Examination Survey"
+    },
+    {
+      "word": "nirmatrelvir",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "nivolumab",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "nmosd",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "Neuromyelitis Optica Spectrum Disorder (NMOSD)"
+    },
+    {
+      "word": "nomogram",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "a diagram representing the relations between three or more variable quantities"
+    },
+    {
+      "word": "normalcy",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "often as “return to normalcy” after covid pandemic"
+    },
+    {
+      "word": "notable",
+      "class": "style",
+      "part_of_speech": "adjective",
+      "comment": null
+    },
+    {
+      "word": "notably",
+      "class": "style",
+      "part_of_speech": "advebr",
+      "comment": null
+    },
+    {
+      "word": "noteworthy",
+      "class": "style",
+      "part_of_speech": "adjective",
+      "comment": null
+    },
+    {
+      "word": "nsqip",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "ACS National Surgical Quality Improvement Program"
+    },
+    {
+      "word": "nuanced",
+      "class": "style",
+      "part_of_speech": "adjective",
+      "comment": null
+    },
+    {
+      "word": "nuances",
+      "class": "style",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "nucleocapsid",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "observed",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "offer",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "offering",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "offers",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "omicron",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "omnibus",
+      "class": "content",
+      "part_of_speech": "adjective",
+      "comment": "omnibus statistical test"
+    },
+    {
+      "word": "online",
+      "class": "content",
+      "part_of_speech": "adjective",
+      "comment": null
+    },
+    {
+      "word": "opacities",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "openai",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "optimizing",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "optoelectronics",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "orchestrating",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "organoid",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "originality",
+      "class": "content/style",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "outbreak",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "not only about covid"
+    },
+    {
+      "word": "outcomes",
+      "class": "style",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "outlines",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "outperforming",
+      "class": "content",
+      "part_of_speech": "verb",
+      "comment": "one method outperforming another"
+    },
+    {
+      "word": "overlook",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "overlooking",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "overpotential",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "electrochemistry term"
+    },
+    {
+      "word": "overwhelmed",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "pandemic",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "pandemics",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "paracancerous",
+      "class": "content",
+      "part_of_speech": "adjective",
+      "comment": null
+    },
+    {
+      "word": "particularly",
+      "class": "style",
+      "part_of_speech": "adverb",
+      "comment": null
+    },
+    {
+      "word": "patient",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "patients",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "paving",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "pcgs",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "various abbreviations"
+    },
+    {
+      "word": "pembrolizumab",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "drug"
+    },
+    {
+      "word": "perovskite",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "mineral"
+    },
+    {
+      "word": "perovskites",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "persist",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "personalized",
+      "class": "content",
+      "part_of_speech": "adjective",
+      "comment": "personalized medicine"
+    },
+    {
+      "word": "pfas",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "Per- and polyfluoroalkyl substances are a group of synthetic organofluorine chemical compounds"
+    },
+    {
+      "word": "pfizer",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "photobiomodulation",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "phytochemistry",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "phytoconstituents",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "pinpoint",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "pinpointed",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "pinpointing",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "pioneering",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "pioneers",
+      "class": "style",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "pivotal",
+      "class": "style",
+      "part_of_speech": "adjective",
+      "comment": null
+    },
+    {
+      "word": "plastome",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "pleiotropy",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "pneumonia",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "poised",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "policymaking",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "polydopamine",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "polyfluoroalkyl",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "pose",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "posed",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "poses",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "posing",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "postponed",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "potential",
+      "class": "style",
+      "part_of_speech": "adjective",
+      "comment": null
+    },
+    {
+      "word": "potentially",
+      "class": "style",
+      "part_of_speech": "adverb",
+      "comment": null
+    },
+    {
+      "word": "precautionary",
+      "class": "content",
+      "part_of_speech": "adjective",
+      "comment": "\"precautionary measures\""
+    },
+    {
+      "word": "precautions",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "precise",
+      "class": "style",
+      "part_of_speech": "adjective",
+      "comment": null
+    },
+    {
+      "word": "predominantly",
+      "class": "style",
+      "part_of_speech": "adverb",
+      "comment": null
+    },
+    {
+      "word": "prepandemic",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "preregistered",
+      "class": "content",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "presents",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "preserving",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "pressing",
+      "class": "style",
+      "part_of_speech": "adjective",
+      "comment": null
+    },
+    {
+      "word": "presso",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "MR-PRESSO: Mendelian Randomization Pleiotropy RESidual Sum and Outlier"
+    },
+    {
+      "word": "pretrained",
+      "class": "content",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "prevalent",
+      "class": "style",
+      "part_of_speech": "adjective",
+      "comment": null
+    },
+    {
+      "word": "primarily",
+      "class": "style",
+      "part_of_speech": "adverb",
+      "comment": null
+    },
+    {
+      "word": "primary",
+      "class": "style",
+      "part_of_speech": "adjective",
+      "comment": null
+    },
+    {
+      "word": "printer",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "3d printers"
+    },
+    {
+      "word": "printing",
+      "class": "content",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "prioritize",
+      "class": "content/style",
+      "part_of_speech": "verb",
+      "comment": "edge case -- \"vaccine prioritizations\""
+    },
+    {
+      "word": "prioritizes",
+      "class": "content/style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "prioritizing",
+      "class": "content/style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "procalcitonin",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "prominence",
+      "class": "content/style",
+      "part_of_speech": "noun",
+      "comment": "\"linguistic prominence\" and some other terms"
+    },
+    {
+      "word": "promise",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "promising",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "prompting",
+      "class": "content/style",
+      "part_of_speech": "verb",
+      "comment": "can be about LLM prompts"
+    },
+    {
+      "word": "prompts",
+      "class": "content",
+      "part_of_speech": "nouns",
+      "comment": "LLM prompts"
+    },
+    {
+      "word": "proms",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "Patient-reported outcome measures"
+    },
+    {
+      "word": "pronounced",
+      "class": "style",
+      "part_of_speech": "adjective",
+      "comment": null
+    },
+    {
+      "word": "propelling",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "prospero",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "International Prospective Register of Systematic Reviews"
+    },
+    {
+      "word": "providing",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "pseudomolecules",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "pseudotyped",
+      "class": "content",
+      "part_of_speech": "vreb",
+      "comment": null
+    },
+    {
+      "word": "psma",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "Prostate-specific membrane antigen"
+    },
+    {
+      "word": "ptrend",
+      "class": "content",
+      "part_of_speech": "other",
+      "comment": "p-value for trend"
+    },
+    {
+      "word": "pwms",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "People with MS"
+    },
+    {
+      "word": "quarantine",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "quarantined",
+      "class": "content",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "racialized",
+      "class": "content",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "racism",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "radiographical",
+      "class": "content",
+      "part_of_speech": "adjective",
+      "comment": null
+    },
+    {
+      "word": "radiomics",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "radium",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "randomization",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "rates",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "rdrp",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "RNA-dependent RNA polymerase"
+    },
+    {
+      "word": "reactogenicity",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "reactogenicity is the capacity of a vaccine to produce common, \"expected\" adverse reactions"
+    },
+    {
+      "word": "realizes",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "realm",
+      "class": "style",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "realms",
+      "class": "style",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "recognizing",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "redescribed",
+      "class": "content",
+      "part_of_speech": "verb",
+      "comment": "redescribed species"
+    },
+    {
+      "word": "refine",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "refines",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "refining",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "reframing",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "reinfection",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "reinfections",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "reliance",
+      "class": "content/style",
+      "part_of_speech": "noun",
+      "comment": "can have technical and non-technical meanings"
+    },
+    {
+      "word": "remains",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "remarkable",
+      "class": "style",
+      "part_of_speech": "adjective",
+      "comment": null
+    },
+    {
+      "word": "remdesivir",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "remotely",
+      "class": "content/style",
+      "part_of_speech": "adjective",
+      "comment": null
+    },
+    {
+      "word": "renowned",
+      "class": "style",
+      "part_of_speech": "adjective",
+      "comment": null
+    },
+    {
+      "word": "reopening",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "covid-related"
+    },
+    {
+      "word": "repurposed",
+      "class": "content",
+      "part_of_speech": "adjective",
+      "comment": "repurposed medications"
+    },
+    {
+      "word": "research",
+      "class": "style",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "resnet",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "respirator",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "respirators",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "respiratory",
+      "class": "content",
+      "part_of_speech": "adjective",
+      "comment": null
+    },
+    {
+      "word": "restrictions",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "resulting",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "resuming",
+      "class": "content/style",
+      "part_of_speech": "verb",
+      "comment": "can relate to covid pandemic"
+    },
+    {
+      "word": "rethink",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "retrosigmoid",
+      "class": "content",
+      "part_of_speech": "adjective",
+      "comment": "retrosigmoid approach - neurosurgery term"
+    },
+    {
+      "word": "revealed",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "revealing",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "reveals",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "review",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "revolutionize",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "revolutionizing",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "revolves",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "rhino",
+      "class": "content",
+      "part_of_speech": "other",
+      "comment": "part of different words written with a hyphen"
+    },
+    {
+      "word": "ribonucleic",
+      "class": "content",
+      "part_of_speech": "adjective",
+      "comment": null
+    },
+    {
+      "word": "robins",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "The ROBINS-I tool (“Risk Of Bias In Non-randomised Studies - of Interventions”) is concerned with evaluating risk of bias"
+    },
+    {
+      "word": "role",
+      "class": "style",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "rollout",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "rosenberg",
+      "class": "content",
+      "part_of_speech": "name",
+      "comment": "Rosenberg self-esteem scale"
+    },
+    {
+      "word": "rrnas",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "ribosomal RNA"
+    },
+    {
+      "word": "rstudio",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "refers to R language"
+    },
+    {
+      "word": "safeguard",
+      "class": "content",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "safeguarding",
+      "class": "content",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "sars",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "scaffolded",
+      "class": "content",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "scfas",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "short-chain fatty acid"
+    },
+    {
+      "word": "scielo",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "bibliographic database"
+    },
+    {
+      "word": "scoping",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "\"scoping review\" - a type of review"
+    },
+    {
+      "word": "scrna",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "small conditional RNA"
+    },
+    {
+      "word": "scrutinize",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "scrutinized",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "scrutinizing",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "seahorse",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "Seahorse Bioscience is a private company that develops and manufactures cellular bioenergetics analytical instruments"
+    },
+    {
+      "word": "seamless",
+      "class": "style",
+      "part_of_speech": "adjective",
+      "comment": null
+    },
+    {
+      "word": "seamlessly",
+      "class": "style",
+      "part_of_speech": "adverb",
+      "comment": null
+    },
+    {
+      "word": "seeks",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "seir",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "susceptible-exposed-infected-recovered - infection model"
+    },
+    {
+      "word": "sentiment",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "sentiment analysis"
+    },
+    {
+      "word": "serves",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "serving",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "severe",
+      "class": "content",
+      "part_of_speech": "adjective",
+      "comment": "severe disease"
+    },
+    {
+      "word": "shandong",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "province in China"
+    },
+    {
+      "word": "shap",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "SHapley Additive exPlanations"
+    },
+    {
+      "word": "shaping",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "shapley",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "SHapley Additive exPlanations"
+    },
+    {
+      "word": "shedding",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "shenzhen",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "city in China"
+    },
+    {
+      "word": "shortages",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "shortness",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "\"shortness of breath\""
+    },
+    {
+      "word": "showcased",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "showcases",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "showcasing",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "shutdown",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "Covid pandemic related"
+    },
+    {
+      "word": "sierra",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "Sierra Leone - ebola outbreak"
+    },
+    {
+      "word": "significant",
+      "class": "content/style",
+      "part_of_speech": "adjective",
+      "comment": "can mean \"statistically significant\" but not necessarily"
+    },
+    {
+      "word": "signifying",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "smallpox",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "smell",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "Covid leads to smell loss"
+    },
+    {
+      "word": "sneezing",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "sofosbuvir",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "solidarity",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "solidify",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "sore",
+      "class": "content",
+      "part_of_speech": "adjective",
+      "comment": null
+    },
+    {
+      "word": "sourced",
+      "class": "content",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "spanned",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "spanning",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "specific",
+      "class": "content",
+      "part_of_speech": "adjective",
+      "comment": "used in hyphenated words like \"something-specific\""
+    },
+    {
+      "word": "specifically",
+      "class": "style",
+      "part_of_speech": "adverb",
+      "comment": null
+    },
+    {
+      "word": "spike",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "spike protein"
+    },
+    {
+      "word": "sponging",
+      "class": "content",
+      "part_of_speech": "verb",
+      "comment": "Covid context"
+    },
+    {
+      "word": "spread",
+      "class": "content",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "spurred",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "srmr",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "standardized root mean squared residual"
+    },
+    {
+      "word": "ssgsea",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "single-sample gene set enrichment analysis"
+    },
+    {
+      "word": "standardizing",
+      "class": "style/content",
+      "part_of_speech": "verb",
+      "comment": "can have technical and non-technical meanings"
+    },
+    {
+      "word": "stands",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "stata",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "statistical software"
+    },
+    {
+      "word": "statement",
+      "class": "style",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "steatotic",
+      "class": "content",
+      "part_of_speech": "adjective",
+      "comment": "steatosis = accumulation of fat in tissues"
+    },
+    {
+      "word": "stemming",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "storm",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "cytokine storm"
+    },
+    {
+      "word": "strategically",
+      "class": "style",
+      "part_of_speech": "adjective",
+      "comment": null
+    },
+    {
+      "word": "strategies",
+      "class": "style",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "streamline",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "streamlined",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "streamlines",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "streamlining",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "stretchable",
+      "class": "content",
+      "part_of_speech": "adjective",
+      "comment": "stretchable devices, electronics, etc"
+    },
+    {
+      "word": "stringency",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "Covid measures stringency"
+    },
+    {
+      "word": "strobe",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "Strengthening the Reporting of Observational Studies in Epidemiology"
+    },
+    {
+      "word": "struggle",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "study",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "sublineages",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "subsequently",
+      "class": "style",
+      "part_of_speech": "adverb",
+      "comment": null
+    },
+    {
+      "word": "substantial",
+      "class": "style",
+      "part_of_speech": "adjective",
+      "comment": null
+    },
+    {
+      "word": "substantiated",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "substantiates",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "supplementary",
+      "class": "content",
+      "part_of_speech": "adjective",
+      "comment": "Supplementary Materials, medications, motor areas, etc."
+    },
+    {
+      "word": "surge",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "Covid context"
+    },
+    {
+      "word": "surged",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "surmount",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "surpass",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "surpassed",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "surpasses",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "surpassing",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "suvmax",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "Maximum Standard Unit Value (SUVmax) is an indicator for overall survival in lung cancer"
+    },
+    {
+      "word": "swab",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "swift",
+      "class": "style",
+      "part_of_speech": "adjective",
+      "comment": null
+    },
+    {
+      "word": "swiftly",
+      "class": "style",
+      "part_of_speech": "adverb",
+      "comment": null
+    },
+    {
+      "word": "syndrome",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "synonym",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "species taxonomy"
+    },
+    {
+      "word": "synonyms",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "species taxonomy"
+    },
+    {
+      "word": "synonymy",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "species taxonomy"
+    },
+    {
+      "word": "synthesizes",
+      "class": "style/content",
+      "part_of_speech": "verb",
+      "comment": "can have technical and non-technical meanings"
+    },
+    {
+      "word": "tailored",
+      "class": "content",
+      "part_of_speech": "adjective",
+      "comment": "medical approaches tailored to the patient"
+    },
+    {
+      "word": "talens",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "transcription activator-like effector nucleases"
+    },
+    {
+      "word": "talent",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "tcga",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "the cancer genome atlas"
+    },
+    {
+      "word": "tcmsp",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "Traditional Chinese Medicine Systems Pharmacology"
+    },
+    {
+      "word": "techniques",
+      "class": "style",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "telehealth",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "telemedicine",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "telerehabilitation",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "their",
+      "class": "style",
+      "part_of_speech": "pronoun",
+      "comment": null
+    },
+    {
+      "word": "therapeutic",
+      "class": "content",
+      "part_of_speech": "adjective",
+      "comment": null
+    },
+    {
+      "word": "therapeutical",
+      "class": "content",
+      "part_of_speech": "adjective",
+      "comment": null
+    },
+    {
+      "word": "thereby",
+      "class": "style",
+      "part_of_speech": "adverb",
+      "comment": null
+    },
+    {
+      "word": "these",
+      "class": "style",
+      "part_of_speech": "pronoun",
+      "comment": null
+    },
+    {
+      "word": "this",
+      "class": "style",
+      "part_of_speech": "pronoun",
+      "comment": null
+    },
+    {
+      "word": "thorough",
+      "class": "style",
+      "part_of_speech": "adjective",
+      "comment": null
+    },
+    {
+      "word": "through",
+      "class": "style",
+      "part_of_speech": "preposition",
+      "comment": null
+    },
+    {
+      "word": "timepoint",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "timer",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "Tumor IMmune Estimation Resource"
+    },
+    {
+      "word": "tirzepatide",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "tmax",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "time to maximum concentration"
+    },
+    {
+      "word": "tmds",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "temporomandibular disorders"
+    },
+    {
+      "word": "tocilizumab",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "tofacitinib",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "trainings",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "transformative",
+      "class": "style",
+      "part_of_speech": "adjective",
+      "comment": null
+    },
+    {
+      "word": "transformer",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "transformers",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "transgender",
+      "class": "content",
+      "part_of_speech": "adjective",
+      "comment": null
+    },
+    {
+      "word": "transitioning",
+      "class": "content",
+      "part_of_speech": "verb",
+      "comment": "different uses"
+    },
+    {
+      "word": "transmissibility",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "transwell",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "wetlab device"
+    },
+    {
+      "word": "treatment",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "triaging",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "trinetx",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "TriNetX is a self-service web-based data exploration tool"
+    },
+    {
+      "word": "trna",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "transport RNA"
+    },
+    {
+      "word": "trustworthy",
+      "class": "content",
+      "part_of_speech": "adjective",
+      "comment": "trustworthy AI"
+    },
+    {
+      "word": "tweets",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "twitter",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "typically",
+      "class": "style",
+      "part_of_speech": "adverb",
+      "comment": null
+    },
+    {
+      "word": "ukrainian",
+      "class": "content",
+      "part_of_speech": "adjective",
+      "comment": null
+    },
+    {
+      "word": "ultimately",
+      "class": "style",
+      "part_of_speech": "adverb",
+      "comment": null
+    },
+    {
+      "word": "uncharted",
+      "class": "style",
+      "part_of_speech": "adjective",
+      "comment": null
+    },
+    {
+      "word": "uncovering",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "underexplored",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "underscore",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "underscored",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "underscores",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "underscoring",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "understanding",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "unexplored",
+      "class": "style",
+      "part_of_speech": "adjective",
+      "comment": null
+    },
+    {
+      "word": "unlocking",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "unparalleled",
+      "class": "style",
+      "part_of_speech": "adjective",
+      "comment": null
+    },
+    {
+      "word": "unraveling",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "unvaccinated",
+      "class": "content",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "unveil",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "unveiled",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "unveiling",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "unveils",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "upadacitinib",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "uphold",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "upholding",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "urging",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "using",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "utilized",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "utilizes",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "utilizing",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "vaccinate",
+      "class": "content",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "vaccinated",
+      "class": "content",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "vaccination",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "vaccinations",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "vaccine",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "vaccinees",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "vaccines",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "valuable",
+      "class": "style",
+      "part_of_speech": "adjective",
+      "comment": null
+    },
+    {
+      "word": "vaping",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "variations",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "can be used in various contexts, but usually has technical meaning"
+    },
+    {
+      "word": "various",
+      "class": "style",
+      "part_of_speech": "adjective",
+      "comment": null
+    },
+    {
+      "word": "varying",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "vemurafenib",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "ventilation",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "ventilators",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "verifies",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "versatility",
+      "class": "style",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "videoconferencing",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "vigilant",
+      "class": "content",
+      "part_of_speech": "adjective",
+      "comment": "doctors being vigilant about some condition"
+    },
+    {
+      "word": "viral",
+      "class": "content",
+      "part_of_speech": "adjective",
+      "comment": null
+    },
+    {
+      "word": "vmax",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "maximum velocity"
+    },
+    {
+      "word": "vosviewer",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "VOSViewer is a software tool which can be used to conduct bibliometric analyses and create visualizations from selected database"
+    },
+    {
+      "word": "wandering",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "wanfang",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "Wanfang Data has been a leading information content and service provider in China"
+    },
+    {
+      "word": "waning",
+      "class": "content",
+      "part_of_speech": "adjective",
+      "comment": "waning immunity"
+    },
+    {
+      "word": "warranting",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "wearable",
+      "class": "content",
+      "part_of_speech": "adjective",
+      "comment": null
+    },
+    {
+      "word": "welded",
+      "class": "content",
+      "part_of_speech": "adjective",
+      "comment": "welded joints"
+    },
+    {
+      "word": "were",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "wgcna",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "Weighted correlation network analysis, also known as weighted gene co-expression network analysis"
+    },
+    {
+      "word": "whatsapp",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": null
+    },
+    {
+      "word": "while",
+      "class": "style",
+      "part_of_speech": "preposition",
+      "comment": null
+    },
+    {
+      "word": "whiteness",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "about race"
+    },
+    {
+      "word": "within",
+      "class": "style",
+      "part_of_speech": "adverb",
+      "comment": null
+    },
+    {
+      "word": "workers",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "relates to covid"
+    },
+    {
+      "word": "worried",
+      "class": "content",
+      "part_of_speech": "verb",
+      "comment": "relates to covid (anxiety)"
+    },
+    {
+      "word": "worries",
+      "class": "content",
+      "part_of_speech": "verb",
+      "comment": "related to covid"
+    },
+    {
+      "word": "wuhan",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "covid related"
+    },
+    {
+      "word": "xgboost",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "ML model"
+    },
+    {
+      "word": "yielding",
+      "class": "style",
+      "part_of_speech": "verb",
+      "comment": null
+    },
+    {
+      "word": "yolo",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "\"you only look once\", ML algorithm for object detection"
+    },
+    {
+      "word": "youtube",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "studies talking about youtube"
+    },
+    {
+      "word": "zika",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "virus"
+    },
+    {
+      "word": "zikv",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "virus"
+    },
+    {
+      "word": "zoom",
+      "class": "content",
+      "part_of_speech": "noun",
+      "comment": "related to covid, zoom the videocalling platform"
+    }
+  ]
+}

@@ -1,0 +1,182 @@
+[
+  {
+    "id": "technical.empty-importance",
+    "severity": "high",
+    "kind": "regex",
+    "patterns": ["(?i)\\b(?:importantly|crucially|notably)\\b[,]?", "(?i)\\bit (?:is|'s) (?:important|worth) (?:to note|noting) that\\b", "(?i)\\ba key (?:insight|point|takeaway) is that\\b"],
+    "message": "The sentence announces importance instead of stating the consequence.",
+    "suggestion": "Delete the marker or replace it with the concrete consequence.",
+    "profiles": ["all"]
+  },
+  {
+    "id": "technical.contrast-template",
+    "severity": "high",
+    "kind": "regex",
+    "patterns": ["(?is)\\bnot (?:just|merely|simply|only)\\b.{0,120}?\\bbut(?: also)?\\b", "(?is)\\bmore than (?:just|merely|simply)\\b.{0,120}"],
+    "message": "Formulaic contrast delays the positive claim.",
+    "suggestion": "State the positive claim directly unless the contrast carries necessary information.",
+    "profiles": ["all"]
+  },
+  {
+    "id": "technical.stock-implication",
+    "severity": "high",
+    "kind": "regex",
+    "patterns": ["(?i)(?:^|[.!?]\\s+)This (?:enables|ensures|highlights|demonstrates|underscores|allows the (?:system|implementation) to)\\b"],
+    "message": "Stock implication sentence; check whether it adds information.",
+    "suggestion": "Name the actual mechanism or consequence, or delete the recap.",
+    "profiles": ["technical", "academic", "pr"]
+  },
+  {
+    "id": "technical.rhetorical-inflation",
+    "severity": "high",
+    "kind": "regex",
+    "patterns": ["(?i)\\b(?:represents|marks) (?:a )?(?:fundamental|profound|pivotal|significant) (?:rethinking|shift|departure|moment)\\b", "(?i)\\bparadigm shift\\b", "(?i)\\bnew way of thinking about\\b"],
+    "message": "A local claim is inflated into a broad conceptual shift.",
+    "suggestion": "Describe the concrete change and evidence for its importance.",
+    "profiles": ["all"]
+  },
+  {
+    "id": "technical.excess-signposting",
+    "severity": "medium",
+    "kind": "regex",
+    "patterns": ["(?im)^(?:In practice|More broadly|At a high level|From this perspective|In this context|Taken together|Overall|Ultimately)[,:]"],
+    "message": "Stock discourse signpost.",
+    "suggestion": "Start with the subject when the logical relation is already clear.",
+    "profiles": ["technical", "academic", "pr"]
+  },
+  {
+    "id": "technical.meta-writing",
+    "severity": "high",
+    "kind": "regex",
+    "patterns": ["(?i)\\bThis (?:section|chapter|article|document) (?:explores|examines|discusses|delves into)\\b", "(?i)\\bThe following (?:section|discussion) (?:explores|examines|considers)\\b", "(?i)\\bIt is useful to consider\\b"],
+    "message": "Meta-writing announces prose instead of starting with the subject.",
+    "suggestion": "State the section's first substantive claim directly.",
+    "profiles": ["technical", "academic"]
+  },
+  {
+    "id": "technical.unsupported-rationale",
+    "severity": "high",
+    "kind": "regex",
+    "patterns": ["(?i)\\b(?:was|were) deliberately (?:chosen|designed|structured) to (?:balance|ensure|maximize|provide)\\b", "(?i)\\breflects? a broader (?:philosophy|commitment|vision)\\b"],
+    "message": "Polished rationale may exceed the evidence in the source.",
+    "suggestion": "Keep only rationale supported by the source or design record.",
+    "profiles": ["technical", "academic", "pr"]
+  },
+  {
+    "id": "technical.semantic-laundering",
+    "severity": "high",
+    "kind": "regex",
+    "patterns": ["(?i)\\b(?:the results|we) demonstrate(?:s|d)? that\\b"],
+    "message": "Strong evidential verb; verify that the evidence supports this level of certainty.",
+    "suggestion": "Preserve the source's epistemic status (for example, observed, suggests, or may).",
+    "profiles": ["academic", "technical"]
+  },
+  {
+    "id": "technical.nominalization-stack",
+    "severity": "medium",
+    "kind": "regex",
+    "patterns": ["(?i)\\bthe (?:provision|facilitation|establishment|implementation|utilization) of .{0,60}\\b(?:capability|mechanism|functionality|process|operation)s?\\b"],
+    "message": "Abstract nouns obscure the actor and action.",
+    "suggestion": "Name who does what.",
+    "profiles": ["technical", "academic"]
+  },
+  {
+    "id": "technical.participial-tail",
+    "severity": "medium",
+    "kind": "regex",
+    "patterns": [",\\s+(?:highlighting|underscoring|showcasing|demonstrating|reflecting|ensuring|enabling|reinforcing)\\b"],
+    "message": "Formulaic participial tail may add a vague implication.",
+    "suggestion": "State the implication precisely or remove the tail.",
+    "profiles": ["all"]
+  },
+  {
+    "id": "codex.artifact-residence",
+    "severity": "medium",
+    "kind": "regex",
+    "patterns": ["(?i)\\b(?:config(?:uration)?|logic|rule|helper|implementation|policy|code|state|check|guard)\\s+(?:lives?|sits?|resides?)\\s+(?:in|under|at|within)\\b"],
+    "message": "A technical artifact is described with a stock location metaphor.",
+    "suggestion": "Use 'is defined in', 'is stored in', or name the actual relation.",
+    "profiles": ["technical", "pr", "commit"]
+  },
+  {
+    "id": "codex.artifact-agency",
+    "severity": "medium",
+    "kind": "regex",
+    "patterns": ["(?i)\\b(?:helper|rule|guard|check|config(?:uration)?|implementation|boundary|contract)\\s+(?:owns?|carries|holds|demands|refuses|knows|decides)\\b"],
+    "message": "A technical artifact is given vague agency.",
+    "suggestion": "Name the concrete operation or responsible component.",
+    "profiles": ["technical", "pr", "commit"]
+  },
+  {
+    "id": "codex.change-landing",
+    "severity": "medium",
+    "kind": "regex",
+    "patterns": ["(?i)\\b(?:change|fix|patch|implementation|support|behavior|behaviour)\\s+(?:lands?|landed|landing)\\b", "(?i)\\blands? (?:in|on|with) (?:this|the)\\b"],
+    "message": "Stock engineering metaphor for adding or merging a change.",
+    "suggestion": "Use 'adds', 'merges', 'is implemented in', or the precise event.",
+    "profiles": ["technical", "pr", "commit"]
+  },
+  {
+    "id": "codex.clean-tight-honest",
+    "severity": "high",
+    "kind": "regex",
+    "patterns": ["(?i)\\b(?:clean|tight|honest) (?:shape|boundary|contract|surface|story|split|seam|path|model|representation)\\b", "(?i)\\b(?:keeps?|stays?) (?:the )?(?:story|boundary|contract|surface|path) (?:clean|tight|honest)\\b"],
+    "message": "Vague evaluative adjective attached to an abstract technical noun.",
+    "suggestion": "Name the property: smaller API, fewer states, explicit ownership, or another concrete effect.",
+    "profiles": ["technical", "pr", "commit"]
+  },
+  {
+    "id": "codex.quiet-loud",
+    "severity": "medium",
+    "kind": "regex",
+    "patterns": ["(?i)\\b(?:guard|check|path|fallback|implementation|behavior|behaviour)\\s+(?:stays?|remains?|is)\\s+(?:quiet|loud)\\b"],
+    "message": "Quiet/loud is used as an underspecified technical property.",
+    "suggestion": "Say whether it logs, fails, retries, emits output, or changes behavior.",
+    "profiles": ["technical", "pr", "commit"]
+  },
+  {
+    "id": "common.template-phrase",
+    "severity": "medium",
+    "kind": "literal",
+    "patterns": ["at its core", "in today's rapidly evolving", "in the realm of", "a testament to", "paving the way", "plays a crucial role", "at the heart of", "the intersection of", "a beacon of", "it remains to be seen", "without further ado", "in a nutshell", "unlock the power of", "bridge the gap", "move the needle", "at the end of the day", "the bottom line is"],
+    "message": "Stock template phrase.",
+    "suggestion": "Replace it with the concrete claim or delete it.",
+    "profiles": ["all"]
+  },
+  {
+    "id": "common.chatbot-residue",
+    "severity": "high",
+    "kind": "literal",
+    "patterns": ["as an ai language model", "i hope this helps", "i'd be happy to", "please don't hesitate to reach out", "let's dive in", "let us delve into", "great question!", "that's a great point!"],
+    "message": "Chatbot-facing residue remains in the prose.",
+    "suggestion": "Delete it and begin with the requested content.",
+    "profiles": ["all"]
+  },
+  {
+    "id": "common.promotional-inflation",
+    "severity": "medium",
+    "kind": "literal",
+    "patterns": ["game-changing", "cutting-edge", "groundbreaking", "revolutionary", "transformative", "unprecedented", "world-class", "next-generation", "best-in-class", "supercharge", "elevate your"],
+    "message": "Promotional adjective substitutes for evidence.",
+    "suggestion": "State the measurable or structural property.",
+    "profiles": ["technical", "academic", "pr", "commit"]
+  },
+  {
+    "id": "common.formal-transition",
+    "severity": "medium",
+    "kind": "regex",
+    "patterns": ["(?im)^(?:Moreover|Furthermore|Additionally|Consequently|Nevertheless|Indeed|Interestingly)[,:]"],
+    "message": "Formulaic formal transition.",
+    "suggestion": "Use it only when it expresses a necessary logical relation.",
+    "profiles": ["all"]
+  },
+  {
+    "id": "commit.diff-narration",
+    "severity": "medium",
+    "kind": "regex",
+    "patterns": ["(?im)^(?:This commit|This change|This PR) (?:adds|updates|implements|introduces|ensures|provides)\\b"],
+    "message": "The commit message narrates the diff instead of naming the change.",
+    "suggestion": "Use an imperative subject line or state the user-visible behavior.",
+    "profiles": ["commit", "pr"]
+  }
+]

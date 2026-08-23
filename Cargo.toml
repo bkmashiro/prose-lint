@@ -1,0 +1,20 @@
+[package]
+name = "prose-lint"
+version = "0.1.0"
+edition = "2024"
+description = "Fast, evidence-aware linter for formulaic LLM-shaped prose"
+license = "MIT"
+repository = "https://github.com/bkmashiro/prose-lint"
+
+[dependencies]
+aho-corasick = "1.1"
+rayon = "1.10"
+regex = "1.11"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+[profile.release]
+strip = true
+lto = "thin"
+codegen-units = 1
+panic = "abort"
