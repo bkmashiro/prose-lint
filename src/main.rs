@@ -1,6 +1,8 @@
 use glob::{MatchOptions, glob_with};
-use prose_lint::{Format, Profile, Report, ScanOptions, Scanner};
+use prose_lint::{CustomTerm, Format, Profile, Report, ScanOptions, Scanner, Severity};
 use rayon::prelude::*;
+use serde::Deserialize;
+use std::collections::HashMap;
 use std::env;
 use std::fs;
 use std::io::{self, Write};
@@ -18,6 +20,7 @@ OPTIONS:
     --format <FORMAT>  text or json [default: text]
     --all              Show low-confidence empirical vocabulary findings
     --strict           Exit 1 when a high-confidence finding is present
+    --config <PATH>    Use one config for every input instead of auto-discovery
     --jobs <N>         Maximum parallel file scans
     -h, --help         Print help
     -V, --version      Print version
@@ -36,6 +39,35 @@ struct Cli {
     show_all: bool,
     strict: bool,
     jobs: Option<usize>,
+    config: Option<PathBuf>,
+}
+
+#[derive(Debug, Deserialize)]
+#[serde(deny_unknown_fields)]
+struct RepoConfig {
+    #[serde(default)]
+    extra_terms: Vec<ExtraTermConfig>,
+}
+
+#[derive(Debug, Deserialize)]
+#[serde(untagged)]
+enum ExtraTermConfig {
+    Simple(String),
+    Detailed(DetailedTermConfig),
+}
+
+#[derive(Debug, Deserialize)]
+#[serde(deny_unknown_fields)]
+struct DetailedTermConfig {
+    term: String,
+    #[serde(default = "default_custom_severity")]
+    severity: Severity,
+    message: Option<String>,
+    suggestion: Option<String>,
+}
+
+fn default_custom_severity() -> Severity {
+    Severity::Medium
 }
 
 fn main() -> ExitCode {
@@ -52,7 +84,6 @@ fn run() -> Result<ExitCode, String> {
     let Some(cli) = parse_args(env::args().skip(1).collect())? else {
         return Ok(ExitCode::SUCCESS);
     };
-    let scanner = Scanner::builtin().map_err(|error| error.to_string())?;
     let mut files = Vec::new();
     for path in &cli.paths {
         collect_input(path, &mut files)?;
@@ -63,20 +94,54 @@ fn run() -> Result<ExitCode, String> {
         return Err("no supported prose files found".to_owned());
     }
 
+    let mut scanners = vec![Scanner::builtin().map_err(|error| error.to_string())?];
+    let mut scanner_indices = HashMap::new();
+    let mut config_discovery = HashMap::new();
+    let mut scan_jobs = Vec::with_capacity(files.len());
+    for path in files {
+        let config_path = match &cli.config {
+            Some(config) => Some(config.clone()),
+            None => find_repo_config(&path, &mut config_discovery)?,
+        };
+        let scanner_index = match config_path {
+            Some(config_path) => {
+                if let Some(index) = scanner_indices.get(&config_path) {
+                    *index
+                } else {
+                    let terms = load_custom_terms(&config_path)?;
+                    let scanner = Scanner::builtin_with_custom_terms(&terms).map_err(|error| {
+                        format!("cannot compile {}: {error}", config_path.display())
+                    })?;
+                    let index = scanners.len();
+                    scanners.push(scanner);
+                    scanner_indices.insert(config_path, index);
+                    index
+                }
+            }
+            None => 0,
+        };
+        scan_jobs.push((path, scanner_index));
+    }
+
     let options = ScanOptions {
         profile: cli.profile,
         show_all: cli.show_all,
     };
-    let scan = || {
-        files
-            .par_iter()
-            .map(|path| {
-                let text = fs::read_to_string(path)
-                    .map_err(|error| format!("cannot read {}: {error}", path.display()))?;
-                Ok(scanner.scan_text(&path.display().to_string(), &text, &options))
-            })
-            .collect::<Vec<Result<Report, String>>>()
-    };
+    let scan =
+        || {
+            scan_jobs
+                .par_iter()
+                .map(|(path, scanner_index)| {
+                    let text = fs::read_to_string(path)
+                        .map_err(|error| format!("cannot read {}: {error}", path.display()))?;
+                    Ok(scanners[*scanner_index].scan_text(
+                        &path.display().to_string(),
+                        &text,
+                        &options,
+                    ))
+                })
+                .collect::<Vec<Result<Report, String>>>()
+        };
     let results = if let Some(jobs) = cli.jobs {
         if jobs == 0 {
             return Err("--jobs must be at least 1".to_owned());
@@ -146,6 +211,7 @@ fn parse_args(args: Vec<String>) -> Result<Option<Cli>, String> {
     let mut show_all = false;
     let mut strict = false;
     let mut jobs = None;
+    let mut config = None;
     let mut index = usize::from(args.first().is_some_and(|arg| arg == "scan"));
 
     while index < args.len() {
@@ -188,6 +254,12 @@ fn parse_args(args: Vec<String>) -> Result<Option<Cli>, String> {
                         .map_err(|_| format!("invalid job count {value:?}"))?,
                 );
             }
+            "--config" => {
+                index += 1;
+                config = Some(PathBuf::from(
+                    args.get(index).ok_or("--config requires a value")?,
+                ));
+            }
             "--" => {
                 paths.extend(args[index + 1..].iter().map(PathBuf::from));
                 break;
@@ -208,7 +280,84 @@ fn parse_args(args: Vec<String>) -> Result<Option<Cli>, String> {
         show_all,
         strict,
         jobs,
+        config,
     }))
+}
+
+fn find_repo_config(
+    path: &Path,
+    cache: &mut HashMap<PathBuf, Option<PathBuf>>,
+) -> Result<Option<PathBuf>, String> {
+    let absolute = if path.is_absolute() {
+        path.to_path_buf()
+    } else {
+        env::current_dir()
+            .map_err(|error| format!("cannot read current directory: {error}"))?
+            .join(path)
+    };
+    let mut directory = absolute.parent().map(Path::to_path_buf);
+    let mut visited = Vec::new();
+    let result = loop {
+        let Some(current) = directory else {
+            break None;
+        };
+        if let Some(config) = cache.get(&current) {
+            break config.clone();
+        }
+        visited.push(current.clone());
+        let config = current.join(".prose-lint.json");
+        if config.is_file() {
+            break Some(config);
+        }
+        if current.join(".git").exists() {
+            break None;
+        }
+        directory = current.parent().map(Path::to_path_buf);
+    };
+    for directory in visited {
+        cache.insert(directory, result.clone());
+    }
+    Ok(result)
+}
+
+fn load_custom_terms(path: &Path) -> Result<Vec<CustomTerm>, String> {
+    let source = fs::read_to_string(path)
+        .map_err(|error| format!("cannot read {}: {error}", path.display()))?;
+    let config: RepoConfig = serde_json::from_str(&source)
+        .map_err(|error| format!("cannot parse {}: {error}", path.display()))?;
+    config
+        .extra_terms
+        .into_iter()
+        .map(|entry| {
+            let (term, severity, message, suggestion) = match entry {
+                ExtraTermConfig::Simple(term) => (term, Severity::Medium, None, None),
+                ExtraTermConfig::Detailed(detail) => (
+                    detail.term,
+                    detail.severity,
+                    detail.message,
+                    detail.suggestion,
+                ),
+            };
+            let term = term.trim().to_owned();
+            if term.is_empty() {
+                return Err(format!(
+                    "invalid {}: custom term must not be empty",
+                    path.display()
+                ));
+            }
+            Ok(CustomTerm {
+                message: message.unwrap_or_else(|| {
+                    format!("{term:?} is discouraged by this repository's prose policy.")
+                }),
+                suggestion: suggestion.unwrap_or_else(|| {
+                    "Use the repository's preferred wording or explain why this term is needed."
+                        .to_owned()
+                }),
+                term,
+                severity,
+            })
+        })
+        .collect()
 }
 
 fn collect_input(path: &Path, files: &mut Vec<PathBuf>) -> Result<(), String> {

@@ -1,4 +1,4 @@
-use prose_lint::{Format, Profile, ScanOptions, Scanner, Severity};
+use prose_lint::{CustomTerm, Format, Profile, ScanOptions, Scanner, Severity};
 
 #[test]
 fn flags_high_confidence_technical_prose_patterns() {
@@ -184,4 +184,28 @@ fn report_serializes_as_json() {
     let value: serde_json::Value = serde_json::from_str(&output).unwrap();
     assert_eq!(value["path"], "draft.md");
     assert!(!value["findings"].as_array().unwrap().is_empty());
+}
+
+#[test]
+fn custom_terms_are_case_insensitive_but_still_respect_masking_and_boundaries() {
+    let scanner = Scanner::builtin_with_custom_terms(&[CustomTerm {
+        term: "Magic Surface".to_owned(),
+        severity: Severity::Medium,
+        message: "Repository-specific abstraction.".to_owned(),
+        suggestion: "Name the concrete API.".to_owned(),
+    }])
+    .unwrap();
+    let report = scanner.scan_text(
+        "custom.md",
+        "The MAGIC SURFACE is vague. `magic surface` and magic surfaces are excluded.",
+        &ScanOptions::default(),
+    );
+    let hits: Vec<_> = report
+        .findings
+        .iter()
+        .filter(|finding| finding.rule_id == "custom.repo-term")
+        .collect();
+    assert_eq!(hits.len(), 1);
+    assert_eq!(hits[0].matched, "MAGIC SURFACE");
+    assert_eq!(hits[0].message, "Repository-specific abstraction.");
 }

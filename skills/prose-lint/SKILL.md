@@ -31,6 +31,18 @@ The first scans top-level Typst files; the second scans them recursively. An
 unmatched pattern is an error, so do not report success without reading the
 command's exit status.
 
+## Repository vocabulary
+
+The CLI automatically loads the nearest ancestor `.prose-lint.json` for each
+file. Repository `extra_terms` are deliberate local policy, so inspect every
+custom finding even when its severity is low. A scan spanning multiple
+repositories may use a different config for each file. Use `--config PATH`
+only when one explicit config should override discovery for every input.
+
+Custom terms are literals, not regexes. Do not edit the repository config or
+add terms merely to make one revision easier unless the user requested a policy
+change.
+
 ## Interpret findings
 
 Apply findings in this order:

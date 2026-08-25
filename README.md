@@ -114,6 +114,36 @@ offsets. Positional paths accept `*`, `?`, character classes such as `[ab]`, and
 recursive `**` glob patterns. An unmatched pattern is an error instead of a
 silent empty scan.
 
+### Repository-specific terms
+
+Add `.prose-lint.json` at a repository root to extend the literal vocabulary
+without changing the built-in dataset:
+
+```json
+{
+  "extra_terms": [
+    "magic surface",
+    {
+      "term": "lands cleanly",
+      "severity": "high",
+      "message": "Use the repository's concrete merge terminology.",
+      "suggestion": "Name the actual operation."
+    }
+  ]
+}
+```
+
+A string entry defaults to `medium`. Detailed entries accept `low`, `medium`,
+or `high`; `message` and `suggestion` are optional. Terms are literal,
+case-insensitive, boundary-aware matches—not regular expressions. Markdown
+code and URLs remain masked.
+
+For every file, Prose Lint loads the nearest ancestor `.prose-lint.json`,
+stopping at its Git root. One command can therefore scan several repositories
+with different policies. Use `--config PATH` to force one config for all
+inputs. Custom findings are always shown because they are explicit repository
+policy; only custom `high` findings affect `--strict`.
+
 Profiles:
 
 ```text

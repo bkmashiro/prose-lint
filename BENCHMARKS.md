@@ -30,8 +30,8 @@ Observed result:
 real time                 0.34 s
 throughput                15.7 MB/s
 file rate                 2,941 files/s
-maximum resident set      92.8 MiB
-release binary             1.72 MiB
+maximum resident set      93.5 MiB
+release binary             1.75 MiB
 ```
 
 The peak memory figure is deliberately adversarial: the CLI retains reports in

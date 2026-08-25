@@ -169,6 +169,156 @@ fn unmatched_glob_reports_the_pattern() {
 }
 
 #[test]
+fn discovers_nearest_repo_config_and_applies_extra_terms() {
+    let workspace = fixture_dir();
+    let repo = workspace.join("repo");
+    fs::create_dir_all(repo.join(".git")).unwrap();
+    fs::create_dir_all(repo.join("docs")).unwrap();
+    fs::write(
+        repo.join(".prose-lint.json"),
+        r#"{
+  "extra_terms": [
+    "magic surface",
+    {
+      "term": "lands cleanly",
+      "severity": "high",
+      "message": "Use the repository's concrete merge terminology.",
+      "suggestion": "Name the operation."
+    }
+  ]
+}"#,
+    )
+    .unwrap();
+    fs::write(
+        repo.join("docs/guide.md"),
+        "The magic surface works and the patch lands cleanly.",
+    )
+    .unwrap();
+
+    let output = Command::new(env!("CARGO_BIN_EXE_prose-lint"))
+        .args(["scan", "repo/docs/guide.md", "--format", "json", "--strict"])
+        .current_dir(&workspace)
+        .output()
+        .unwrap();
+    assert_eq!(output.status.code(), Some(1));
+    let reports: serde_json::Value = serde_json::from_slice(&output.stdout).unwrap();
+    let custom: Vec<_> = reports[0]["findings"]
+        .as_array()
+        .unwrap()
+        .iter()
+        .filter(|finding| finding["rule_id"] == "custom.repo-term")
+        .collect();
+    assert_eq!(custom.len(), 2);
+    assert!(custom.iter().any(|finding| finding["severity"] == "medium"));
+    assert!(custom.iter().any(|finding| finding["severity"] == "high"));
+    fs::remove_dir_all(workspace).unwrap();
+}
+
+#[test]
+fn one_scan_uses_each_repositories_nearest_config() {
+    let workspace = fixture_dir();
+    for (repo_name, term) in [("repo-a", "alpha fog"), ("repo-b", "beta fog")] {
+        let repo = workspace.join(repo_name);
+        fs::create_dir_all(repo.join(".git")).unwrap();
+        fs::write(
+            repo.join(".prose-lint.json"),
+            format!(r#"{{"extra_terms":["{term}"]}}"#),
+        )
+        .unwrap();
+        fs::write(repo.join("guide.md"), "alpha fog and beta fog").unwrap();
+    }
+
+    let output = Command::new(env!("CARGO_BIN_EXE_prose-lint"))
+        .args(["scan", ".", "--format", "json"])
+        .current_dir(&workspace)
+        .output()
+        .unwrap();
+    assert!(output.status.success());
+    let reports: serde_json::Value = serde_json::from_slice(&output.stdout).unwrap();
+    assert_eq!(reports.as_array().unwrap().len(), 2);
+    for report in reports.as_array().unwrap() {
+        let matches: Vec<_> = report["findings"]
+            .as_array()
+            .unwrap()
+            .iter()
+            .filter(|finding| finding["rule_id"] == "custom.repo-term")
+            .map(|finding| finding["matched"].as_str().unwrap())
+            .collect();
+        assert_eq!(matches.len(), 1);
+        let path = report["path"].as_str().unwrap();
+        assert_eq!(
+            matches[0],
+            if path.contains("repo-a") {
+                "alpha fog"
+            } else {
+                "beta fog"
+            }
+        );
+    }
+    fs::remove_dir_all(workspace).unwrap();
+}
+
+#[test]
+fn explicit_config_overrides_auto_discovery() {
+    let repo = fixture_dir();
+    fs::create_dir_all(repo.join(".git")).unwrap();
+    fs::write(
+        repo.join(".prose-lint.json"),
+        r#"{"extra_terms":["auto term"]}"#,
+    )
+    .unwrap();
+    fs::write(
+        repo.join("override.json"),
+        r#"{"extra_terms":["forced term"]}"#,
+    )
+    .unwrap();
+    fs::write(repo.join("guide.md"), "auto term and forced term").unwrap();
+
+    let output = Command::new(env!("CARGO_BIN_EXE_prose-lint"))
+        .args([
+            "scan",
+            "guide.md",
+            "--config",
+            "override.json",
+            "--format",
+            "json",
+        ])
+        .current_dir(&repo)
+        .output()
+        .unwrap();
+    assert!(output.status.success());
+    let reports: serde_json::Value = serde_json::from_slice(&output.stdout).unwrap();
+    let matches: Vec<_> = reports[0]["findings"]
+        .as_array()
+        .unwrap()
+        .iter()
+        .filter(|finding| finding["rule_id"] == "custom.repo-term")
+        .map(|finding| finding["matched"].as_str().unwrap())
+        .collect();
+    assert_eq!(matches, ["forced term"]);
+    fs::remove_dir_all(repo).unwrap();
+}
+
+#[test]
+fn malformed_repo_config_fails_with_its_path() {
+    let repo = fixture_dir();
+    fs::create_dir_all(repo.join(".git")).unwrap();
+    fs::write(repo.join(".prose-lint.json"), r#"{"extra_terms":[""]}"#).unwrap();
+    fs::write(repo.join("guide.md"), "Plain prose.").unwrap();
+
+    let output = Command::new(env!("CARGO_BIN_EXE_prose-lint"))
+        .args(["scan", "guide.md"])
+        .current_dir(&repo)
+        .output()
+        .unwrap();
+    assert_eq!(output.status.code(), Some(2));
+    let stderr = String::from_utf8_lossy(&output.stderr);
+    assert!(stderr.contains(".prose-lint.json"));
+    assert!(stderr.contains("must not be empty"));
+    fs::remove_dir_all(repo).unwrap();
+}
+
+#[test]
 fn broken_pipe_is_treated_as_normal_early_consumer_exit() {
     use std::process::Stdio;
 

@@ -86,6 +86,14 @@ pub enum Severity {
     High,
 }
 
+#[derive(Debug, Clone)]
+pub struct CustomTerm {
+    pub term: String,
+    pub severity: Severity,
+    pub message: String,
+    pub suggestion: String,
+}
+
 #[derive(Debug, Clone, Copy)]
 pub enum Format {
     Text,
@@ -207,6 +215,7 @@ struct VocabularyEntry {
 enum LiteralTarget {
     Rule(usize),
     Vocabulary(String),
+    Custom(usize),
 }
 
 #[derive(Debug, Clone)]
@@ -223,12 +232,17 @@ pub struct Scanner {
     regexes: Vec<Regex>,
     regex_rule_indices: Vec<usize>,
     abstraction_automaton: AhoCorasick,
+    custom_terms: Vec<CustomTerm>,
     vocabulary_candidates: usize,
     active_style_vocabulary: usize,
 }
 
 impl Scanner {
     pub fn builtin() -> Result<Self, Error> {
+        Self::builtin_with_custom_terms(&[])
+    }
+
+    pub fn builtin_with_custom_terms(custom_terms: &[CustomTerm]) -> Result<Self, Error> {
         let rules: Vec<RuleDef> = serde_json::from_str(RULES_JSON)
             .map_err(|error| Error::Data(format!("cannot parse rules.json: {error}")))?;
         let vocabulary: VocabularyData = serde_json::from_str(VOCABULARY_JSON)
@@ -269,6 +283,24 @@ impl Scanner {
             }
         }
 
+        let custom_terms = custom_terms
+            .iter()
+            .cloned()
+            .map(|mut custom| {
+                custom.term = custom.term.trim().to_owned();
+                if custom.term.is_empty() {
+                    return Err(Error::Data("custom term must not be empty".to_owned()));
+                }
+                Ok(custom)
+            })
+            .collect::<Result<Vec<_>, _>>()?;
+        for (custom_index, custom) in custom_terms.iter().enumerate() {
+            literal_patterns.push(custom.term.clone());
+            literal_meta.push(LiteralMeta {
+                target: LiteralTarget::Custom(custom_index),
+            });
+        }
+
         let literal_automaton = AhoCorasickBuilder::new()
             .ascii_case_insensitive(true)
             .match_kind(MatchKind::Standard)
@@ -295,6 +327,7 @@ impl Scanner {
             regexes,
             regex_rule_indices,
             abstraction_automaton,
+            custom_terms,
             vocabulary_candidates: vocabulary.entries.len(),
             active_style_vocabulary,
         })
@@ -357,6 +390,24 @@ impl Scanner {
                         }
                     } else {
                         suppressed_low_confidence += 1;
+                    }
+                }
+                LiteralTarget::Custom(custom_index) => {
+                    let custom = &self.custom_terms[*custom_index];
+                    let key = ("custom.repo-term".to_owned(), hit.start(), hit.end());
+                    if seen.insert(key) {
+                        let (line, column) = line_column(source, &newlines, hit.start());
+                        findings.push(Finding {
+                            rule_id: "custom.repo-term".to_owned(),
+                            severity: custom.severity,
+                            line,
+                            column,
+                            start: hit.start(),
+                            end: hit.end(),
+                            matched: source[hit.start()..hit.end()].to_owned(),
+                            message: custom.message.clone(),
+                            suggestion: custom.suggestion.clone(),
+                        });
                     }
                 }
             }

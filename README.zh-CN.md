@@ -102,6 +102,34 @@ code、inline code 和 URL 会被屏蔽，同时保留原始 byte offset。位�
 pattern，让 shell 把它原样交给 CLI；没有匹配项时会明确报错，不会静默完成
 一次空扫描。
 
+### 仓库专属附加词库
+
+在仓库根目录添加 `.prose-lint.json`，即可扩展 literal 词库，不需要修改内置
+数据集：
+
+```json
+{
+  "extra_terms": [
+    "magic surface",
+    {
+      "term": "lands cleanly",
+      "severity": "high",
+      "message": "请使用本仓库具体的合并术语。",
+      "suggestion": "直接说明实际操作。"
+    }
+  ]
+}
+```
+
+字符串条目默认是 `medium`。详细条目支持 `low`、`medium`、`high`，其中
+`message` 和 `suggestion` 可省略。附加词按大小写不敏感、带词边界的 literal
+匹配处理，不接受 regex；Markdown code 和 URL 仍然会被屏蔽。
+
+扫描每个文件时，Prose Lint 会向上查找最近的 `.prose-lint.json`，到该文件
+所属 Git 根目录为止。因此同一个命令可以同时扫描多个仓库，并分别采用各自的
+词库。`--config PATH` 可以强制所有输入使用同一个配置。专属词是仓库明确指定
+的规则，因此即使是 `low` 也始终显示；只有 `high` 会影响 `--strict`。
+
 可用 profile：
 
 ```text
