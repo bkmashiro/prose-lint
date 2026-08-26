@@ -18,6 +18,15 @@
     "profiles": ["all"]
   },
   {
+    "id": "codex.standalone-correction",
+    "severity": "medium",
+    "kind": "regex",
+    "patterns": ["(?m)^[ \\t]*This\\b[^\\n.!?]{1,240}?,[ \\t]+not[ \\t]+[^\\n.!?]{1,180}[.!?][ \\t]*$", "(?m)^[ \\t]*This\\b[^\\n.!?]{1,240}?\\brather[ \\t]+than[ \\t]+[^\\n.!?]{1,180}[.!?][ \\t]*$"],
+    "message": "Standalone corrective sentence may read like an unsolicited disclaimer.",
+    "suggestion": "Keep it when the exclusion resolves a real ambiguity; otherwise state the selected mechanism or path directly.",
+    "profiles": ["technical", "academic", "pr"]
+  },
+  {
     "id": "technical.stock-implication",
     "severity": "high",
     "kind": "regex",

@@ -160,10 +160,14 @@ technical  academic  pr  commit  casual  marketing
 - 抽象名词堆叠；
 - 声称技术对象会 “live”、“own” 或 “carry” 某物；
 - 声称改动会 “land”；
+- 独占一整行的 `This …, not ….` 和 `This … rather than ….` 自我纠正式句子；
 - `boundary / surface / contract / posture` 密集共现；
 - 宣传式措辞和过高的 em dash 密度。
 
 如果一个技术术语准确描述了概念，就应保留。
+该规则有意要求整行以 `This` 开头且只包含一个句子；它不会禁止普通 prose
+中的 `not` 或 `rather than`，也不会命中 `The parser accepts JSON, not YAML.`
+这类直接技术说明。
 
 ### Low
 

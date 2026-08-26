@@ -59,6 +59,11 @@ A dense abstraction cluster can be useful evidence of formulaic prose, but its
 individual terms may still be correct. Prefer removing ornamental uses over
 rotating synonyms.
 
+`codex.standalone-correction` flags a single physical line shaped like
+`This …, not ….` or `This … rather than ….`. Treat it as a medium-confidence
+disclaimer lead, not a ban on contrast. Keep it when the excluded alternative
+resolves a real ambiguity; otherwise state the selected mechanism directly.
+
 ## Rewrite constraints
 
 - Preserve factual claims, numbers, citations, quotations, identifiers, and

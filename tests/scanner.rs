@@ -30,6 +30,33 @@ fn flags_high_confidence_technical_prose_patterns() {
 }
 
 #[test]
+fn flags_standalone_deictic_corrections_without_banning_ordinary_not() {
+    let scanner = Scanner::builtin().unwrap();
+    let text = concat!(
+        "This case study uses the shared-backing mechanism, not the early-source latency path.\n",
+        "This is a host-owned path rather than a guest fallback.\n",
+        "The parser accepts JSON, not YAML.\n",
+        "This case uses byte offsets, not character offsets. The distinction matters.\n",
+        "A lead-in makes this case use the shared mechanism, not the fallback.\n",
+        "This case uses the shared mechanism,\nnot the fallback.\n",
+    );
+    let report = scanner.scan_text("contrast.md", text, &ScanOptions::default());
+    let hits: Vec<_> = report
+        .findings
+        .iter()
+        .filter(|finding| finding.rule_id == "codex.standalone-correction")
+        .collect();
+
+    assert_eq!(hits.len(), 2);
+    assert_eq!(hits[0].line, 1);
+    assert_eq!(hits[1].line, 2);
+    assert!(
+        hits.iter()
+            .all(|finding| finding.severity == Severity::Medium)
+    );
+}
+
+#[test]
 fn masks_markdown_code_and_inline_code() {
     let scanner = Scanner::builtin().unwrap();
     let text = "Use `It is worth noting that` as a test value.\n\n```text\nImportantly, delve into it.\n```\n\nPlain prose delves into the issue.";

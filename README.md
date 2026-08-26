@@ -174,10 +174,15 @@ These patterns need context:
 - abstract noun stacks;
 - technical artifacts said to “live”, “own”, or “carry” something;
 - changes said to “land”;
+- standalone `This …, not ….` and `This … rather than ….` corrective
+  sentences, which may be useful distinctions or unsolicited disclaimers;
 - dense `boundary / surface / contract / posture` clusters;
 - promotional phrasing and high em-dash density.
 
 A valid technical term should remain when it names the correct concept.
+The standalone-correction rule is deliberately line-anchored: it does not ban
+`not` or `rather than` inside ordinary prose, and it does not flag precise
+sentences such as `The parser accepts JSON, not YAML.`
 
 ### Low
 
