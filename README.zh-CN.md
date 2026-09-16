@@ -6,7 +6,7 @@
 
 对，上面这段就是故意的：它是一份披着 README 外衣的测试样本。
 
-Prose Lint 是一个快速、确定性的英文 prose linter，用来找出 LLM 和
+Prose Lint 是一个快速、确定性的中英文 prose linter，用来找出 LLM 和
 Codex 常见的公式化表达。仓库同时提供一个 Agent Skill，指导 agent 在不改动
 事实、证据和不确定性的前提下修订文本。
 
@@ -221,8 +221,7 @@ python3 scripts/generate_benchmark_corpus.py /tmp/prose-lint-bench
 
 ## 限制
 
-- Scanner 当前面向英文 prose；中文 README 中的整活文案不会得到有意义的中文
-  style 诊断；
+- 中英文规则默认一起扫描。中文采用高召回提示，结构同构、复述和材料密度仍需人工判断；详见[中文覆盖与限制](data/zh-rules.md)；
 - 它使用确定性的表层和结构规则，不做语义推理；
 - 没有 finding 不代表文本自然、正确或由人创作；
 - 出现 finding 也不意味着必须改写，最终仍由上下文和文档目的决定。

@@ -1,6 +1,6 @@
 ---
 name: prose-lint
-description: Use when scanning or revising English technical prose for formulaic LLM/Codex wording. Run the deterministic linter, prioritize high-confidence findings, and preserve claims, evidence, terminology, citations, numbers, and uncertainty.
+description: Use when scanning or revising English or Chinese technical prose for formulaic LLM/Codex wording. Run the deterministic linter, prioritize high-confidence findings, and preserve claims, evidence, terminology, citations, numbers, and uncertainty.
 ---
 
 # Prose Lint
@@ -30,6 +30,15 @@ prose-lint scan '**/*.typ'
 The first scans top-level Typst files; the second scans them recursively. An
 unmatched pattern is an error, so do not report success without reading the
 command's exit status.
+
+## Chinese review
+
+Chinese rules run automatically in every profile, including mixed-language files.
+Review all `zh.*` findings: this catalogue deliberately favors recall and may flag
+legitimate wording. All are medium severity, visible without `--all`, and do not
+make `--strict` fail. Structural resemblance and restatement markers require
+human/contextual judgment. Preserve genuine contrasts, quotations, conditions,
+numbers and uncertainty. Do not edit code or auto-delete a sentence on a match.
 
 ## Repository vocabulary
 

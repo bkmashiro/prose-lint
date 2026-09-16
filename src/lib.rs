@@ -5,6 +5,8 @@ use std::cmp::Reverse;
 use std::collections::{BTreeSet, HashSet};
 use std::fmt;
 
+mod chinese;
+
 const RULES_JSON: &str = include_str!("../data/rules.json");
 const VOCABULARY_JSON: &str = include_str!("../data/excess-vocabulary.json");
 const ABSTRACTION_TERMS: &[&str] = &[
@@ -243,8 +245,12 @@ impl Scanner {
     }
 
     pub fn builtin_with_custom_terms(custom_terms: &[CustomTerm]) -> Result<Self, Error> {
-        let rules: Vec<RuleDef> = serde_json::from_str(RULES_JSON)
+        let mut rules: Vec<RuleDef> = serde_json::from_str(RULES_JSON)
             .map_err(|error| Error::Data(format!("cannot parse rules.json: {error}")))?;
+        let chinese_rules: Vec<RuleDef> =
+            serde_json::from_str(include_str!("../data/zh-rules.json"))
+                .map_err(|error| Error::Data(format!("cannot parse zh-rules.json: {error}")))?;
+        rules.extend(chinese_rules);
         let vocabulary: VocabularyData = serde_json::from_str(VOCABULARY_JSON)
             .map_err(|error| Error::Data(format!("cannot parse vocabulary: {error}")))?;
 
@@ -445,6 +451,25 @@ impl Scanner {
             &mut seen,
         );
         scan_em_dash_density(source, masked, &newlines, options, &mut findings, &mut seen);
+
+        for (id, start, end) in chinese::scan(masked) {
+            if masked_document.intersects_excluded(start, end) {
+                continue;
+            }
+            if let Some(rule) = self.rules.iter().find(|rule| rule.id == id)
+                && profile_enabled(rule, options.profile)
+            {
+                push_finding(
+                    &mut findings,
+                    &mut seen,
+                    source,
+                    &newlines,
+                    start,
+                    end,
+                    rule,
+                );
+            }
+        }
 
         findings.sort_by_key(|finding| {
             (

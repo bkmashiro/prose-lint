@@ -15,7 +15,7 @@
 Yes, the paragraph above is a test fixture wearing a README costume. Prose Lint
 flags it accordingly.
 
-A fast, deterministic linter for formulaic LLM-shaped English prose, with a
+A fast, deterministic linter for formulaic LLM-shaped English and Chinese prose, with a
 separate skill for evidence-safe revision.
 
 Prose Lint reports editing leads. It does not determine whether a person or a
@@ -237,7 +237,7 @@ The latest checked local smoke result and its environment are recorded in
 
 ## Limitations
 
-- The scanner currently targets English prose.
+- English rules and high-recall Chinese review rules run together. Chinese structural and semantic candidates require contextual review; see [coverage](data/zh-rules.md).
 - It uses deterministic surface and structural rules, not semantic inference.
 - A clean report does not prove that prose is natural, correct, or human-written.
 - A finding does not require a rewrite. Context and document purpose remain

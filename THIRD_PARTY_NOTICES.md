@@ -45,6 +45,38 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
 
+## Chinese rule adaptation
+
+`data/zh-rules.json` and `src/chinese.rs` adapt the rule families and structural
+fingerprint method of [lieflat-less-ai-tone](https://github.com/larashero3-dotcom/lieflat-less-ai-tone),
+revision `27d29232f10124db904ca9c0536d0b67cb3b2833`. See
+[data/zh-rules.md](data/zh-rules.md) for coverage and intentional differences.
+The upstream corpus is unpublished; its frequency claims have not been independently verified.
+
+```text
+MIT License
+
+Copyright (c) 2026 shiujan
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
 ## Pattern references
 
 The curated rule catalogue was written for this project. Its categories and

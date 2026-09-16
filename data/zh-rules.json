@@ -1,0 +1,225 @@
+[
+  {
+    "id": "zh.reversal",
+    "severity": "medium",
+    "kind": "regex",
+    "patterns": [
+      "(?:不是|并非|不在于)[^。！？\\n]+?(?:而是|而在于|，是|。而是)",
+      "与其说[^。！？\\n]+?不如说",
+      "(?:看似|表面上?|你以为)[^。！？\\n]+?(?:实则|实际上?|其实)",
+      "回头才发现|说到底|答案恰恰相反",
+      "[^。！？\\n]+不重要[，,][^。！？\\n]*重要的是",
+      "(?:不是|并非)[^。！？\\n]+。[ \\t]*而是"
+    ],
+    "message": "疑似虚设误解后翻转；检查对比是否提供必要信息。",
+    "suggestion": "高召回审阅项，允许误报。保留事实、限定条件和必要的技术区别；不自动修改。",
+    "profiles": [
+      "all"
+    ]
+  },
+  {
+    "id": "zh.enumeration",
+    "severity": "medium",
+    "kind": "regex",
+    "patterns": [
+      "[^，。！？；：、\\n]+、[^，。！？；：、\\n]+(?:、[^，。！？；：、\\n]+)+"
+    ],
+    "message": "密集顿号罗列；保留配置、法规等必须列全的项目。",
+    "suggestion": "高召回审阅项，允许误报。保留事实、限定条件和必要的技术区别；不自动修改。",
+    "profiles": [
+      "all"
+    ]
+  },
+  {
+    "id": "zh.sentence-template",
+    "severity": "medium",
+    "kind": "regex",
+    "patterns": [],
+    "message": "相邻中文句的标点及长度结构相近；人工检查是否模板化或重复堆砌案例。",
+    "suggestion": "高召回审阅项，允许误报。保留事实、限定条件和必要的技术区别；不自动修改。",
+    "profiles": [
+      "all"
+    ]
+  },
+  {
+    "id": "zh.em-dash",
+    "severity": "medium",
+    "kind": "regex",
+    "patterns": [
+      "——"
+    ],
+    "message": "中文破折号候选；检查揭晓式停顿和多余补充。",
+    "suggestion": "高召回审阅项，允许误报。保留事实、限定条件和必要的技术区别；不自动修改。",
+    "profiles": [
+      "all"
+    ]
+  },
+  {
+    "id": "zh.colon-preamble",
+    "severity": "medium",
+    "kind": "regex",
+    "patterns": [
+      "(?:一句话(?:总结|概括)|核心(?:是|在于)?|关键(?:是|在于)?|原因(?:如下|有[^：:\\n]*)?|结论|本质上|换句话说|简单说|说白了|总结|重点|答案|具体(?:来说|如下|包括))[：:]"
+    ],
+    "message": "提示语引出的冒号；检查提示语是否承担信息。",
+    "suggestion": "高召回审阅项，允许误报。保留事实、限定条件和必要的技术区别；不自动修改。",
+    "profiles": [
+      "all"
+    ]
+  },
+  {
+    "id": "zh.list-announcement",
+    "severity": "medium",
+    "kind": "regex",
+    "patterns": [
+      "(?m)^[^\\n。！？]+[：:][ \\t]*\\n(?:[ \\t]*\\n)*[ \\t]*(?:[-*+] |[0-9]+[.)] )"
+    ],
+    "message": "列表前的宣布句；检查是否空转，保留必要引导及列表内容。",
+    "suggestion": "高召回审阅项，允许误报。保留事实、限定条件和必要的技术区别；不自动修改。",
+    "profiles": [
+      "all"
+    ]
+  },
+  {
+    "id": "zh.numbered-heading",
+    "severity": "medium",
+    "kind": "regex",
+    "patterns": [],
+    "message": "连续三个以上中文编号小标题；检查编号是否用于步骤、法规或交叉引用。",
+    "suggestion": "高召回审阅项，允许误报。保留事实、限定条件和必要的技术区别；不自动修改。",
+    "profiles": [
+      "all"
+    ]
+  },
+  {
+    "id": "zh.idealized-persona",
+    "severity": "medium",
+    "kind": "regex",
+    "patterns": [
+      "(?:像|相当于|好比)(?:是)?[一个位名]+[^。！？\\n]*(?:导师|秘书|助手|顾问|管家|审查员|实习生)"
+    ],
+    "message": "职业人格比喻候选；检查是否理想化修饰或重复机制说明。",
+    "suggestion": "高召回审阅项，允许误报。保留事实、限定条件和必要的技术区别；不自动修改。",
+    "profiles": [
+      "all"
+    ]
+  },
+  {
+    "id": "zh.vague-summary",
+    "severity": "medium",
+    "kind": "regex",
+    "patterns": [
+      "显著提升|大幅增长|明显改善|效率的提升|大量|众多"
+    ],
+    "message": "概括表述候选；若原文已有对应数值则优先引用，不编造材料。",
+    "suggestion": "高召回审阅项，允许误报。保留事实、限定条件和必要的技术区别；不自动修改。",
+    "profiles": [
+      "all"
+    ]
+  },
+  {
+    "id": "zh.nominalization",
+    "severity": "medium",
+    "kind": "regex",
+    "patterns": [
+      "(?:完成|实现|进行|开展)了?(?:对)?[^，。！？\\n]*的(?:优化|提升|调整|分析|改造|升级)"
+    ],
+    "message": "动作被包装成名词结构；检查能否直接写出动作。",
+    "suggestion": "高召回审阅项，允许误报。保留事实、限定条件和必要的技术区别；不自动修改。",
+    "profiles": [
+      "all"
+    ]
+  },
+  {
+    "id": "zh.stock-opener",
+    "severity": "medium",
+    "kind": "regex",
+    "patterns": [
+      "说白了|说穿了|先说结论"
+    ],
+    "message": "套话起手式候选；可直接给出判断。",
+    "suggestion": "高召回审阅项，允许误报。保留事实、限定条件和必要的技术区别；不自动修改。",
+    "profiles": [
+      "all"
+    ]
+  },
+  {
+    "id": "zh.long-modifier",
+    "severity": "medium",
+    "kind": "regex",
+    "patterns": [
+      "(?:一个|一种|一套|这种|这个)[^，。、；：！？\\n]{15,}的[\\p{Han}]+",
+      "的[^，。、；：！？\\n]+的[^，。、；：！？\\n]+的",
+      "(?:一个|一种)[^，。、；：！？\\n]+(?:一套|这种|这个)"
+    ],
+    "message": "长前置定语或嵌套修饰候选；检查可读性，保留数量与条件。",
+    "suggestion": "高召回审阅项，允许误报。保留事实、限定条件和必要的技术区别；不自动修改。",
+    "profiles": [
+      "all"
+    ]
+  },
+  {
+    "id": "zh.when-clause",
+    "severity": "medium",
+    "kind": "regex",
+    "patterns": [
+      "当[^，。！？\\n]{2,}时[，,]"
+    ],
+    "message": "前置时间从句候选；删除连接词前确认时间或条件关系不变。",
+    "suggestion": "高召回审阅项，允许误报。保留事实、限定条件和必要的技术区别；不自动修改。",
+    "profiles": [
+      "all"
+    ]
+  },
+  {
+    "id": "zh.topic-shell",
+    "severity": "medium",
+    "kind": "regex",
+    "patterns": [
+      "对于[^，。！？\\n]+来说|对[^，。！？\\n]+而言|就[^，。！？\\n]+而言|在[^，。！？\\n]+方面",
+      "(?:^|[。！？\\n])关于[^，。！？\\n]+[，,]"
+    ],
+    "message": "前置话题壳候选；保留限定讨论范围的表达。",
+    "suggestion": "高召回审阅项，允许误报。保留事实、限定条件和必要的技术区别；不自动修改。",
+    "profiles": [
+      "all"
+    ]
+  },
+  {
+    "id": "zh.transition",
+    "severity": "medium",
+    "kind": "regex",
+    "patterns": [
+      "(?:^|[。！？\\n])[ \\t]*(?:然而|因此|此外|与此同时|换言之|总而言之)[，,、]"
+    ],
+    "message": "句首连接词候选；检查是否需要显式转折或因果衔接。",
+    "suggestion": "高召回审阅项，允许误报。保留事实、限定条件和必要的技术区别；不自动修改。",
+    "profiles": [
+      "all"
+    ]
+  },
+  {
+    "id": "zh.restatement",
+    "severity": "medium",
+    "kind": "regex",
+    "patterns": [
+      "这意味着|这表明|这说明|换句话说"
+    ],
+    "message": "复述提示候选；人工区分重复前文和新推论。",
+    "suggestion": "高召回审阅项，允许误报。保留事实、限定条件和必要的技术区别；不自动修改。",
+    "profiles": [
+      "all"
+    ]
+  },
+  {
+    "id": "zh.zero-subject",
+    "severity": "medium",
+    "kind": "regex",
+    "patterns": [],
+    "message": "非首段评论起手且首句无明确回指词；检查主语或评论对象。",
+    "suggestion": "高召回审阅项，允许误报。保留事实、限定条件和必要的技术区别；不自动修改。",
+    "profiles": [
+      "all"
+    ]
+  }
+]
